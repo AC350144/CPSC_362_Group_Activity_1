@@ -1,3 +1,10 @@
+# Group #8
+- Maxwell Tan
+- Amanda Chen
+- Nithin Rajesh
+- Derek Castanon
+- Anthony Acevedo
+  
 # InstantParty
 
 InstantParty is an online marketplace designed for solo performers, party organizers, and anyone looking to rent a space—from small venues to large lots. Our platform seamlessly connects customers with space lenders, ensuring a secure and automated booking experience. Unlike Airbnb, our product prioritizes automation and user convenience.
