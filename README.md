@@ -30,6 +30,8 @@ For solo performers, party havers, or anyone looking for a space to rent (rangin
 
 ## Features
 
+![image](https://github.com/user-attachments/assets/8d66e91f-6794-44f1-89d0-16f231bfd37b)
+
 ### Homepage
 - Access profile page
 - Access listings page
