@@ -7,35 +7,68 @@
   
 # InstantParty
 
-InstantParty is an online marketplace designed for solo performers, party organizers, and anyone looking to rent a space—from small venues to large lots. Our platform seamlessly connects customers with space lenders, ensuring a secure and automated booking experience. Unlike Airbnb, our product prioritizes automation and user convenience.
+## Product Vision
 
----
+For solo performers, party havers, or anyone looking for a space to rent (ranging from a small venue to a huge lot), **InstantParty** is an online marketplace that connects customers with space lenders. Our platform ensures a seamless and secure experience for booking or listing properties. Unlike Airbnb, our product is highly automated and prioritizes customer feedback.
 
-## Features & Requirements
+## Requirements
 
 ### Functional Requirements
-- Users must be able to log in using their ID and password.
-- Users can post listings for spaces they wish to rent out.
-- Users can upload pictures to enhance their listings.
-- Moderators can remove listings reported as scams.
-- A rating system exists with separate scores for renters and rentees.
+- Users must be able to log into their accounts using an ID and password.
+- Users can post listings for spaces they want to rent out.
+- Users can upload pictures to accompany their listings.
+- Moderators can remove listings that have been reported as scams.
+- A rating system for each user, with separate scores for renters and rentees.
 
-### Non-Functional Requirements
-- The platform must be engaging to encourage high user feedback and growth.
-- User data, including payment methods and personal information, must remain secure and hidden.
-- The system should operate smoothly to meet user expectations.
-- Accessible on all devices.
-- Intuitive and easy to use for all users.
-- Integrated map system to display nearby locations.
+### Non-functional Requirements
+- Engaging user experience to encourage feedback and growth.
+- Secure handling of user data, including payment methods and personal information.
+- Smooth performance to meet user expectations.
+- Accessibility on all devices.
+- User-friendly design for ease of use.
+- Integrated map system for viewing nearby locations and areas.
 
----
+## Features
 
-### Why Choose InstantParty?
-✅ Secure & seamless booking experience  
-✅ High automation for efficiency  
-✅ Designed for both renters and rentees  
-✅ Accessible on any device  
-✅ Built-in map system for easy location discovery  
+### Homepage
+- Access profile page
+- Access listings page
+- Search bar
+- Browse listings
+- Filter by space occupancy
+- Search by mileage radius
+- View listing reviews
+- Tags for venue types
 
-Start renting or listing your space today with **InstantParty!** 🚀
+### Reservation Page
+- View current and past reservations
 
+### Payment
+- Available payment methods
+- Save payment methods for future use
+
+### Account Page
+- Profile management
+- Profile rating system
+- Manage multiple listings
+- Settings page
+- Manage renter and rentee profiles
+
+### Discover Page
+- Mission statement
+
+### Contact Us
+- Contact form (submissions sent to email)
+- Display phone number, email address, etc.
+
+### Review Previous Space
+- Select previously rented spaces
+- Submit reviews for past stays
+
+### Confirmation Page
+- Review listing details
+- Verify selected payment method
+
+### Map Page
+- View nearby listings
+- View listing locations
