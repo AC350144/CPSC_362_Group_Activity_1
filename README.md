@@ -19,6 +19,8 @@ For solo performers, party havers, or anyone looking for a space to rent (rangin
 - Users can upload pictures to accompany their listings.
 - Moderators can remove listings that have been reported as scams.
 - A rating system for each user, with separate scores for renters and rentees.
+- Integrated map system for viewing nearby locations and areas.
+
 
 ### Non-functional Requirements
 - Engaging user experience to encourage feedback and growth.
@@ -26,7 +28,6 @@ For solo performers, party havers, or anyone looking for a space to rent (rangin
 - Smooth performance to meet user expectations.
 - Accessibility on all devices.
 - User-friendly design for ease of use.
-- Integrated map system for viewing nearby locations and areas.
 
 ## Features
 
