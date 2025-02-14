@@ -37,3 +37,7 @@ For solo performers, party havers, or anyone looking for a space to rent out (ra
   - The platform must be accessible on any device.
 - **Usability:**
   - The system should be easy to understand and use for all users.
+ 
+
+![image](https://github.com/user-attachments/assets/48942717-11ab-4a45-b66f-e3672eae774e)
+
