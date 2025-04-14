@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: cereal;
+}
+
+/* Navigation Bar */
+.navBar {
+  background-color: antiquewhite;
+
+
+  h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    border-radius: 14px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: gray;
+  }
+}
+
+.header {
+  margin: 50px;
+}
+
+/* Boxes */
+.account-settings-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 4%;
+  background-color: #fff;
+}
+
+.account-settings-container h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.account-subtext {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.account-subtext .username {
+  font-weight: bold;
+}
+
+.account-subtext a {
+  color: #008489;
+  text-decoration: none;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.setting-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.setting-card:hover {
+  transform: translateY(-5px);
+}
+
+.setting-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.setting-card p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/*Footer */
+.main-wrap {
+  width: 100%;
+  background: fff;
+}
+
+.footer-wrap {
+  position: relative;
+  margin-top: 200px;
+  width: 100%;
+  padding: 40px;
+  background: #f8f8f8;
+}
+
+.footer-wrap-1 {
+  display: flex;
+}
+
+.footer-section {
+  width: 20%;
+  display: block;
+  padding: 10px 35px;
+}
+
+.footer-section:last-of-type {
+  width: 12%;
+}
+
+.footer-section h1 {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #000;
+  font-size: 12px;
+  display: block;
+  text-decoration: none;
+  padding: 4px 0px;
+}
+
+.footer-section button {
+  color: #fff;
+  background-color: #6f5eff;
+  border: none;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 4px 2px;
+  border-radius: 4px;
+}
+
+.footer-section button:hover {
+  background-color: gray;
+  color: #fff;
+}
