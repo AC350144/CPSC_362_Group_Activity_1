@@ -9,14 +9,25 @@
 <div id="logo">
     <img src="images/IP.png" width="150">
 </div>
-<!-- ------------------User Toggle----------------- -->
- <div id="user_toggle">
-
+<!-- ------------------Profile Dropdown----------------- -->
+ <div id="profile_dropdown">
+    <div class="profile">
+        <img src="images/kuchipatchi.png" width="100">
+    </div>
+    <div class="menu">
+        <h3>Username<br><span>Location</span></h3>
+        <ul>
+            <li><img src="images/profile.png" width="50"><a href="#">My Profile</a></li>
+            <li><img src="images/profile.png" width="50"><a href="#">Settings</a></li>
+            <li><img src="images/profile.png" width="50"><a href="#">Host your space</a></li>
+            <li><img src="images/profile.png" width="50"><a href="#">Logout</a></li>
+        </ul>
+    </div>
  </div>
 <!-- ------------------Search Bar------------------ -->
 <div id="search_bar">
     <div class="container">
-        <form>
+        <form method="GET">
             <label for="destination">Where</label>
             <input type="text" id="destination" name="destination" 
                 list="destinations" placeholder="Search destinations">
@@ -41,6 +52,8 @@
         </form>
     </div>
 </div>
+
+<!-- method="POST"-->
 
 </body>
 </html>
