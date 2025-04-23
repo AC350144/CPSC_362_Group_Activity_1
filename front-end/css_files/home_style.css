@@ -178,6 +178,10 @@ body{
     background: #bb6c49;
 }
 
+.search-button svg{
+    padding: 0 20px 25px 0;
+}
+
 .rental_listing {
     display: block;
     text-decoration: none;
