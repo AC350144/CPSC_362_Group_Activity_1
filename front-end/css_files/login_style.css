@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+    background-color: #f5f8fa;
+    height: 100vh;
+}
+
+.split-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.left-panel {
+    background: #f5f8fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.logo-img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+.right-panel {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-element {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="password"],
+.login-btn,
+.create-btn {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login-btn {
+    background-color: #3b99fc;
+    color: white;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #2e82e6;
+}
+
+.forgot-link {
+    display: block;
+    margin: 12px 0;
+    color: #3b99fc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.create-btn {
+    background-color: #45c043;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.create-btn:hover {
+    background-color: #3aaa37;
+}
+
+.tagline {
+    font-size: 30px;
+    width: 60%;
+}
+
+#site_footer {
+    background-color: #f5f0e6;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #e0dcd3;
+    margin-top: 60px;
+}
+
+#site_footer .footer-links {
+  margin-top: 10px;
+}
+
+#site_footer .footer-links a {
+  margin: 0 10px;
+  color: #a37a5e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#site_footer .footer-links a:hover {
+  color: #bb6c49;
+}
