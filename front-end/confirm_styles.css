@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: cereal;
+  flex: 1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navigation Bar */
+.navBar {
+  background-color: antiquewhite;
+
+
+  h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    border-radius: 14px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: gray;
+  }
+}
+
+.header {
+  margin: 50px;
+  position: sticky;
+}
+
+/*Confirm payment*/
+.confirmation-page {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 150px;
+}
+
+#billing-info {
+  border: 1px solid #ddd;
+  padding: 20px;
+  display: inline-block;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  width: 300px;
+  text-align: left;
+}
+
+.money-section,
+.rental-section,
+.payment-section {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+#pay-now-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+#pay-now-btn:hover {
+  background-color: #333;
+}
+
+.confirmation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  /* or whatever height works best for your layout */
+  flex-direction: column;
+}
+
+.return-home-btn {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.return-home-btn {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#billing-info {
+  border: 1px solid #ddd;
+  padding: 30px;
+  background-color: #f9f9f9;
+  width: 400px;
+  font-size: 18px;
+  text-align: left;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Footer */
+#site_footer {
+  background-color: #f5f0e6;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #e0dcd3;
+  margin-top: 60px;
+}
+
+#site_footer .footer-links {
+  margin-top: 10px;
+}
+
+#site_footer .footer-links a {
+  margin: 0 10px;
+  color: #a37a5e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#site_footer .footer-links a:hover {
+  color: #bb6c49;
+}
