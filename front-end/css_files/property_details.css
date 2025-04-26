@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fafafa;
+    background: linear-gradient(135deg, #e63946 0%, #457b9d 100%);
     color: #333;
   }
   
@@ -194,7 +194,7 @@ body {
 
   
 #site_footer {
-    background-color: #f5f0e6;
+    background-color: #b8233e;
     padding: 30px 20px;
     text-align: center;
     font-size: 14px;
