@@ -1,0 +1,24 @@
+#site_footer {
+    background-color: #f5f0e6;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #e0dcd3;
+    margin-top: 60px;
+}
+
+#site_footer .footer-links {
+  margin-top: 10px;
+}
+
+#site_footer .footer-links a {
+  margin: 0 10px;
+  color: #a37a5e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#site_footer .footer-links a:hover {
+  color: #bb6c49;
+}
