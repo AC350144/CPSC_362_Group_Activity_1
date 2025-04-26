@@ -2,159 +2,193 @@ body {
     margin: 0;
     padding: 0;
     font: cereal;
+    flex: 1;
+}
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 /* Navigation Bar */
-.navBar {
-  background-color: antiquewhite;
+  .navBar {
+    background-color: antiquewhite;
 
 
-  h2 {
-    text-align: center;
-    margin: 0px;
-    padding: 20px;
+    h2 {
+      text-align: center;
+      margin: 0px;
+      padding: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      border-radius: 14px;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: gray;
+    }
   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  .header {
+    margin: 50px;
+    position: sticky;
   }
 
-  li {
-    float: left;
+/*Welcome Header*/
+    .welcome-header {
+      margin-bottom: 30px;
+    }
+
+    .welcome-header p {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .welcome-header .username {
+      font-weight: bold;
+    }
+
+    .welcome-header .profile-link {
+      display: block;
+      color: #008489;
+      text-decoration: none;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .welcome-header .profile-link:hover {
+      text-decoration: underline;
+    }
+
+/* Boxes */
+  .account-settings-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 4%;
+    background-color: #fff;
   }
 
-  li a {
-    display: block;
-    border-radius: 14px;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
+  .account-settings-container h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+
+  .account-subtext {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .account-subtext .username {
+    font-weight: bold;
+  }
+
+  .account-subtext a {
+    color: #008489;
     text-decoration: none;
   }
 
-  li a:hover {
-    background-color: gray;
+  .settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
   }
-}
 
-.header {
-  margin: 50px;
-}
+  .setting-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: transform 0.2s ease;
+  }
 
-/* Boxes */
-.account-settings-container {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 4%;
-  background-color: #fff;
-}
+  .setting-card:hover {
+    transform: translateY(-5px);
+  }
 
-.account-settings-container h1 {
-  font-size: 32px;
-  margin-bottom: 5px;
-}
+  .setting-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 
-.account-subtext {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
+  .setting-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+  }
 
-.account-subtext .username {
-  font-weight: bold;
-}
+/*transition*/
+    /* Expanding card styles */
+        .setting-card.expanding {
+          position: absolute;
+          z-index: 10;
+          transition: all 0.4s ease;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          background-color: white;
+        }
 
-.account-subtext a {
-  color: #008489;
-  text-decoration: none;
-}
+    /* Hide grid when expanded */
+    .grid-hidden .setting-card:not(.expanding) {
+      display: none;
+    }
 
-.settings-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
+    /* Optional smooth fade-in for inner content */
+    .section-detail {
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+    }
 
-.setting-card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  transition: transform 0.2s ease;
-}
-
-.setting-card:hover {
-  transform: translateY(-5px);
-}
-
-.setting-card h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.setting-card p {
-  color: #555;
-  font-size: 14px;
-  line-height: 1.4;
-}
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
 
 /*Footer */
-.main-wrap {
-  width: 100%;
-  background: fff;
-}
+    #site_footer {
+      background-color: #f5f0e6;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #e0dcd3;
+      margin-top: 60px;
+    }
 
-.footer-wrap {
-  position: relative;
-  margin-top: 200px;
-  width: 100%;
-  padding: 40px;
-  background: #f8f8f8;
-}
+    #site_footer .footer-links {
+      margin-top: 10px;
+    }
 
-.footer-wrap-1 {
-  display: flex;
-}
+    #site_footer .footer-links a {
+      margin: 0 10px;
+      color: #a37a5e;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
 
-.footer-section {
-  width: 20%;
-  display: block;
-  padding: 10px 35px;
-}
-
-.footer-section:last-of-type {
-  width: 12%;
-}
-
-.footer-section h1 {
-  font-size: 14px;
-  color: black;
-  margin-bottom: 8px;
-}
-
-.footer-section a {
-  color: #000;
-  font-size: 12px;
-  display: block;
-  text-decoration: none;
-  padding: 4px 0px;
-}
-
-.footer-section button {
-  color: #fff;
-  background-color: #6f5eff;
-  border: none;
-  text-align: center;
-  padding: 10px 10px;
-  text-decoration: none;
-  font-size: 12px;
-  margin: 4px 2px;
-  border-radius: 4px;
-}
-
-.footer-section button:hover {
-  background-color: gray;
-  color: #fff;
-}
+    #site_footer .footer-links a:hover {
+      color: #bb6c49;
+    }
