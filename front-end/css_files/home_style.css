@@ -8,19 +8,23 @@
 }
 
 body{
-    background: beige;
+    background: linear-gradient(135deg, #e63946 0%, #457b9d 100%);
+}
+
+#logo{
+    padding: 25px 0 0 50px;
 }
 
 #profile_dropdown{
     position: fixed;
-    top: 20px;
-    right: 30px;
+    top: 50px;
+    right: 90px;
 }
 
 #profile_dropdown .profile{
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -38,8 +42,8 @@ body{
 
 #profile_dropdown .menu{
     position: absolute;
-    top: 120px;
-    right: -10px;
+    top: 140px;
+    right: 10px;
     padding: 10px 20px;
     background: #fff;
     width: 200px;
@@ -51,7 +55,7 @@ body{
 }
 
 #profile_dropdown .menu.active{
-    top: 80px;
+    top: 125px;
     visibility: visible;
     opacity: 1;
 }
@@ -118,6 +122,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -60px; /* Reduce negative margin to add space under the search bar */
+    margin-bottom: 40px; /* Add space under the search bar */
 }
 
 #search_bar .container form {
@@ -135,7 +141,7 @@ body{
     display: block;
     margin-bottom: 6px;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 650;
 }
 
 #search_bar .form-group {
@@ -164,86 +170,96 @@ body{
 }
 
 .search-button {
-    background: #d27d54;
+    background: linear-gradient(to right, #FF6B6B, #4D96FF, #59C173);
     border: none;
     border-radius: 50%;
     padding: 10px;
-    width: 36px;
-    height: 36px;
-    transition: background 0.3s ease;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .search-button:hover {
-    background: #bb6c49;
+    transform: scale(1.1);
 }
 
 .search-button svg{
     padding: 0 20px 25px 0;
 }
 
+#listings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 70px;
+    margin-bottom: 50px; /* Add space between the cards and the footer */
+}
+
 .rental_listing {
-    display: block;
     text-decoration: none;
     color: inherit;
+    width: calc(24% - 20px); /* Adjust width to fit 4 cards per row */
 }
 
-.rental_image{
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+.rental_card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Increased height to make the cards vertically rectangular */
 }
 
-#listings{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 30px;
-    padding: 50px;
-}
-
-.rental_image img{
+.rental_image {
     width: 100%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    height: 80%; /* Increased height to emphasize the image area */
+    object-fit: cover;
+    display: block;
 }
 
-.rental_details{
-    background-color: white;
-    padding: 10px;
-    border-radius: 20px;
+.rental_details {
+    padding: 10px 15px;
+    background: white;
+    height: 20%; /* Reduced the height to give more room for the image */
 }
 
-.rental_details p{
-    color: gray;
+.rental_details h3 {
+    margin: 0;
+    font-size: 1.1em;
 }
 
-.rental_listing:visited,
-.rental_listing:link,
-.rental_listing:hover,
-.rental_listing:active {
-    color: inherit;
+.rental_details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.rental_details p1 {
+    font-weight: bold;
+    font-size: 1em;
 }
 
 #site_footer {
-    background-color: #f5f0e6;
-    padding: 30px 20px;
+    background-color: #b8233e;
+    padding: 20px;
     text-align: center;
     font-size: 14px;
-    color: #777;
-    border-top: 1px solid #e0dcd3;
-    margin-top: 60px;
+    color: #fff;
+    margin-top: 50px; /* Adds space between the footer and the cards */
 }
 
 #site_footer .footer-links {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 #site_footer .footer-links a {
-  margin: 0 10px;
-  color: #a37a5e;
-  text-decoration: none;
-  transition: color 0.2s ease;
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
 #site_footer .footer-links a:hover {
-  color: #bb6c49;
+    opacity: 0.7;
 }
