@@ -102,7 +102,10 @@ body {
 
 /*Footer */
 .main-wrap {
-  width: 100%;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  width: 100vw;
   background: fff;
 }
 
