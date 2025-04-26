@@ -168,15 +168,6 @@ main {
     }
 
 /*Footer */
-<<<<<<< HEAD
-.main-wrap {
-  display: flex;
-  align-self: flex-end;
-  flex-direction: column;
-  width: 100vw;
-  background: fff;
-}
-=======
     #site_footer {
       background-color: #f5f0e6;
       padding: 30px 20px;
@@ -186,7 +177,6 @@ main {
       border-top: 1px solid #e0dcd3;
       margin-top: 60px;
     }
->>>>>>> 11c0daedd8a10ea9e49b03608c8aca7e2613c997
 
     #site_footer .footer-links {
       margin-top: 10px;

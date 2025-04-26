@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Las Vegas, Nevada Listing</title>
+  <link rel="stylesheet" href="css_files/property_details.css">
+</head>
+<body>
+    <div id="logo">
+        <a href="home.html">
+            <img src="images/logo.png" alt="InstantParty Logo" class="logo-img" width="150">
+        </a>
+    </div>
+<div class="container">
+
+  <!-- Image Gallery -->
+  <div class="gallery-grid">
+    <div class="gallery-large">
+      <img src="images/main_photo.png" alt="Main Image">
+    </div>
+    <div class="gallery-small">
+      <img src="images/kitchen.png" alt="Image 1">
+      <img src="images/backyard.png" alt="Image 2">
+      <img src="images/bedroom.png" alt="Image 3">
+      <img src="images/front_view.png" alt="Image 4">
+      <div class="small-last">
+      </div>
+    </div>
+  </div>
+
+  <!-- Listing Info -->
+  <div class="listing-header">
+    <h1>Cozy Beachfront Cottage <span class="rating">⭐ 5.0</span></h1>
+    <p class="location">Oceanside, California, United States</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="left-side">
+
+      <!-- Description -->
+      <div class="description">
+        <h2>About this place</h2>
+        <p>Relax in this cozy beachfront getaway, perfect for couples or solo adventurers. Enjoy stunning sunsets, peaceful mornings, and direct beach access. Fully equipped kitchen, Wi-Fi, and more!</p>
+      </div>
+
+      <!-- Reviews -->
+      <div class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+          <p><strong>Emily</strong> ⭐⭐⭐⭐⭐</p>
+          <p>"Absolutely beautiful spot. Super clean and so close to the ocean. Would love to stay again!"</p>
+        </div>
+        <div class="review">
+          <p><strong>Jason</strong> ⭐⭐⭐⭐⭐</p>
+          <p>"Host was amazing, and the place had everything we needed. Highly recommend."</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right-side Booking Card -->
+    <div class="right-side">
+      <div class="booking-card">
+        <div class="price-section">
+          <span class="price">$250</span> <span class="per-night">night</span>
+        </div>
+
+        <div class="input-group">
+          <label>Check-in</label>
+          <input type="date" id="checkin">
+        </div>
+
+        <div class="input-group">
+          <label>Check-out</label>
+          <input type="date" id="checkout">
+        </div>
+
+        <div class="input-group">
+          <label>Guests</label>
+          <input type="number" id="guests" min="1" value="1">
+        </div>
+
+        <button id="reserve-btn">Reserve</button>
+        <p class="charge-note">You won't be charged yet</p>
+      </div>
+
+      <div id="summary"></div>
+    </div>
+
+  </div>
+
+</div>
+<footer id="site_footer">
+    <p>&copy; 2025 InstantParty. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="#">Support</a>
+    </div>
+  </footer>
+<script src="js_files/property_details.js"></script>
+</body>
+</html>
