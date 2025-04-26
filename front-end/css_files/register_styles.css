@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: cereal;
+  flex: 1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  /* Fallback for very short screens */
+}
+
+/* Navigation Bar */
+.navBar {
+  background-color: antiquewhite;
+
+
+  h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    border-radius: 14px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: gray;
+  }
+}
+
+.header {
+  margin: 50px;
+  position: sticky;
+}
+
+/*User input*/
+.host-container {
+  background: white;
+  padding: 40px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  /* adds space from nav bar */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.unavailable-section {
+  margin-top: 15px;
+}
+
+#unavailableDatesContainer input[type="date"] {
+  display: block;
+  margin-bottom: 10px;
+  max-width: 250px;
+}
+
+.add-date-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-date-btn:hover {
+  background-color: #ddd;
+}
+
+.days-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.days-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#dateCount {
+  font-size: 14px;
+  color: gray;
+  margin-left: 5px;
+}
+
+.post-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-button:hover {
+  background-color: #45a049;
+}
+
+.view-listing-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-listing-btn:hover {
+  background-color: #2980b9;
+}
+
+
+/*Footer */
+#site_footer {
+  background-color: #f5f0e6;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #e0dcd3;
+  margin-top: 60px;
+}
+
+#site_footer .footer-links {
+  margin-top: 10px;
+}
+
+#site_footer .footer-links a {
+  margin: 0 10px;
+  color: #a37a5e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#site_footer .footer-links a:hover {
+  color: #bb6c49;
+}
