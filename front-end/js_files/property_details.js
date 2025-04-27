@@ -55,7 +55,8 @@ document.getElementById('write-review-btn').addEventListener('click', () => {
     `;
   
     const reviewsSection = document.querySelector('.reviews');
-    reviewsSection.innerHTML += newReviewHTML;
+    const addReviewArea = document.querySelector('.add-review-area');
+    reviewsSection.insertBefore(document.createRange().createContextualFragment(newReviewHTML), addReviewArea);
   
     // Reset form
     document.getElementById('review-form').reset();
