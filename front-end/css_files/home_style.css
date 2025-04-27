@@ -122,8 +122,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -60px; /* Reduce negative margin to add space under the search bar */
-    margin-bottom: 40px; /* Add space under the search bar */
+    margin-top: -60px;
+    margin-bottom: 40px;
 }
 
 #search_bar .container form {
@@ -195,13 +195,13 @@ body{
     justify-content: space-between;
     max-width: 100%;
     margin: 0 70px;
-    margin-bottom: 50px; /* Add space between the cards and the footer */
+    margin-bottom: 50px;
 }
 
 .rental_listing {
     text-decoration: none;
     color: inherit;
-    width: calc(24% - 20px); /* Adjust width to fit 4 cards per row */
+    width: calc(24% - 20px);
 }
 
 .rental_card {
@@ -209,12 +209,12 @@ body{
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 400px; /* Increased height to make the cards vertically rectangular */
+    height: 400px;
 }
 
 .rental_image {
     width: 100%;
-    height: 80%; /* Increased height to emphasize the image area */
+    height: 80%;
     object-fit: cover;
     display: block;
 }
@@ -222,7 +222,7 @@ body{
 .rental_details {
     padding: 10px 15px;
     background: white;
-    height: 20%; /* Reduced the height to give more room for the image */
+    height: 20%;
 }
 
 .rental_details h3 {
@@ -246,7 +246,7 @@ body{
     text-align: center;
     font-size: 14px;
     color: #fff;
-    margin-top: 50px; /* Adds space between the footer and the cards */
+    margin-top: 50px;
 }
 
 #site_footer .footer-links {
