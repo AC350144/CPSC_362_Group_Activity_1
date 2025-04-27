@@ -3,21 +3,39 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>InstantParty | Payment</title>
-  <link rel="stylesheet" href="css_files/payment_style.css">
+  <title>Payment</title>
+  <link rel="stylesheet" href="payment_style.css">
 </head>
 <body>
 
-<!--Navigation Bar-->
-  <div class="navBar">
-    <h2>InstantParty</h2>
+<!-- -----------------------Logo----------------------- -->
+<div id="logo">
+  <a href="home.html">
+    <img src="images/logo.png" alt="InstantParty Logo" class="logo-img" width="175">
+  </a>
+</div>
+<!-- ------------------Profile Dropdown---------------- -->
+<div id="profile_dropdown">
+  <div class="profile" onclick="menuToggle()">
+    <img src="images/profile.png" alt="Profile Picture">
+  </div>
+  <div class="menu">
+    <h3>Username<br><span>Location</span></h3>
     <ul>
-      <li><a class="active" href="home.html">Home</a></li>
-      <li style="float:right"><a href="#host">Become a Host</a></li>
-      <li style="float:right"><a href="#search">Search</a></li>
-      <li style="float:right"><a href="#about"></a></li>
+      <li><img src="images/profile.png" width="50"><a href="profile_settings.html">My Profile</a></li>
+      <li><img src="images/profile.png" width="50"><a href="settings.html">Settings</a></li>
+      <li><img src="images/profile.png" width="50"><a href="inbox.html">Inbox</a></li>
+      <li><img src="images/profile.png" width="50"><a href="host_space.html">Host your space</a></li>
+      <li><img src="images/profile.png" width="50"><a href="login.html">Logout</a></li>
     </ul>
   </div>
+</div>
+<script>
+  function menuToggle() {
+    const toggleMenu = document.querySelector('.menu')
+    toggleMenu.classList.toggle('active')
+  }
+</script>
 
   <!--Input Boxes-->
   <main>
@@ -83,12 +101,12 @@
   <footer id="site_footer">
     <p>&copy; 2025 InstantParty. All rights reserved.</p>
     <div class="footer-links">
-      <a href="#">Privacy</a>
+      <a href="privacy#">Privacy</a>
       <a href="terms.html">Terms</a>
-      <a href="#">Support</a>
+      <a href="support.html#">Support</a>
     </div>
   </footer>
 
 <!--JavaScript-->
-  <script src="js_files/payment.js"></script>
+  <script src="payment.js"></script>
 </body>
