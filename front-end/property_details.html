@@ -56,28 +56,29 @@
           <p><strong>Jason</strong> ⭐⭐⭐⭐⭐</p>
           <p>"Host was amazing, and the place had everything we needed. Highly recommend."</p>
         </div>
+        <div class="add-review-area">
+            <button id="write-review-btn">Write a Review</button>
+        
+            <form id="review-form" style="display: none;">
+            <input type="text" id="reviewer-name" placeholder="Your name" required>
+            
+            <select id="reviewer-rating" required>
+                <option value="">Rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                <option value="4">⭐⭐⭐⭐ (4)</option>
+                <option value="3">⭐⭐⭐ (3)</option>
+                <option value="2">⭐⭐ (2)</option>
+                <option value="1">⭐ (1)</option>
+            </select>
+        
+            <textarea id="review-text" placeholder="Write your review..." required></textarea>
+        
+            <button type="submit" id="submit-review-btn">Submit Review</button>
+            </form>
+        </div>
       </div>
 <!-- Add Review Button and Form -->
-<div class="add-review-area">
-    <button id="write-review-btn">Write a Review</button>
 
-    <form id="review-form" style="display: none;">
-    <input type="text" id="reviewer-name" placeholder="Your name" required>
-    
-    <select id="reviewer-rating" required>
-        <option value="">Rating</option>
-        <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-        <option value="4">⭐⭐⭐⭐ (4)</option>
-        <option value="3">⭐⭐⭐ (3)</option>
-        <option value="2">⭐⭐ (2)</option>
-        <option value="1">⭐ (1)</option>
-    </select>
-
-    <textarea id="review-text" placeholder="Write your review..." required></textarea>
-
-    <button type="submit" id="submit-review-btn">Submit Review</button>
-    </form>
-</div>
     </div>
     
 
