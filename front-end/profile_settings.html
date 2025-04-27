@@ -3,16 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Profile - InstantParty</title>
+  <title>InstantParty | Edit your profile</title>
   <link rel="stylesheet" href="css_files/profile_settings_style.css">
 </head>
 <body>
-
   <div id="logo">
     <a href="home.html">
         <img src="images/logo.png" alt="InstantParty Logo" class="logo-img" width="175">
     </a>
 </div>
+<div id="profile_dropdown">
+  <div class="profile" onclick="menuToggle()">
+      <img src="images/profile.png" alt="Profile Picture">
+  </div>
+  <div class="menu">
+      <h3>Username<br><span>Location</span></h3>
+      <ul>
+          <li><img src="images/user.png" width="50"><a href="profile_settings.html">My Profile</a></li>
+          <li><img src="images/settings.png" width="50"><a href="settings.html">Settings</a></li>
+          <li><img src="images/profile.png" width="50"><a href="inbox.html">Inbox</a></li>
+          <li><img src="images/balloons.png" width="50"><a href="host_space.html">Host your space</a></li>
+          <li><img src="images/logout.png" width="50"><a href="login.html">Logout</a></li>
+      </ul>
+  </div>
+</div>
+<script>
+  function menuToggle(){
+      const toggleMenu = document.querySelector('.menu')
+      toggleMenu.classList.toggle('active')
+  }
+</script>
   <div class="container">
     <div class="left-column">
       <div class="card">
@@ -44,7 +64,7 @@
     <p>&copy; 2025 InstantParty. All rights reserved.</p>
     <div class="footer-links">
       <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+      <a href="terms.html">Terms</a>
       <a href="#">Support</a>
     </div>
   </footer>
