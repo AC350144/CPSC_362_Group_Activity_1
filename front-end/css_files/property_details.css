@@ -144,6 +144,21 @@ body {
     position: sticky;
     top: 30px;
   }
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}
+
+.white-card-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin: 30px 0px 30px 0px;
+}
   
   .price-section {
     font-size: 24px;
