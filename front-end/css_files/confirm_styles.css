@@ -7,56 +7,124 @@ body {
 
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(135deg, #e63946 0%, #457b9d 100%);
 }
 
 main {
   flex: 1;
 }
 
-/* Navigation Bar */
-.navBar {
-  background-color: antiquewhite;
-
-
-  h2 {
-    text-align: center;
-    margin: 0px;
-    padding: 20px;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  li {
-    float: left;
-  }
-
-  li a {
-    display: block;
-    border-radius: 14px;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  li a:hover {
-    background-color: gray;
-  }
+/* logo + profile */
+#logo {
+  padding: 25px 0 0 50px;
 }
 
-.header {
-  margin: 50px;
-  position: sticky;
+#profile_dropdown {
+  position: fixed;
+  top: 50px;
+  right: 90px;
+}
+
+#profile_dropdown .profile {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.1);
+}
+
+#profile_dropdown .profile img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#profile_dropdown .menu {
+  position: absolute;
+  top: 140px;
+  right: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  width: 200px;
+  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#profile_dropdown .menu.active {
+  top: 125px;
+  visibility: visible;
+  opacity: 1;
+}
+
+#profile_dropdown .menu::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+#profile_dropdown .menu h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.2em;
+}
+
+#profile_dropdown .menu h3 span {
+  font-size: 14px;
+  color: #cecece;
+  font-weight: 400;
+}
+
+#profile_dropdown .menu ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+
+#profile_dropdown .menu ul li img {
+  max-width: 20px;
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+#profile_dropdown .menu ul li:hover img {
+  opacity: 1;
+}
+
+#profile_dropdown .menu ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+#profile_dropdown .menu ul li:hover a {
+  color: #d27d54;
 }
 
 /*Confirm payment*/
@@ -75,6 +143,7 @@ main {
   margin-bottom: 20px;
   width: 300px;
   text-align: left;
+  border-radius: 14px;
 }
 
 .money-section,
@@ -106,7 +175,6 @@ main {
   justify-content: center;
   align-items: center;
   min-height: 70vh;
-  /* or whatever height works best for your layout */
   flex-direction: column;
 }
 
@@ -144,12 +212,11 @@ main {
 
 /*Footer */
 #site_footer {
-  background-color: #f5f0e6;
+  background-color: #b8233e;
   padding: 30px 20px;
   text-align: center;
   font-size: 14px;
-  color: #777;
-  border-top: 1px solid #e0dcd3;
+  color: #fff;
   margin-top: 60px;
 }
 
@@ -159,7 +226,7 @@ main {
 
 #site_footer .footer-links a {
   margin: 0 10px;
-  color: #a37a5e;
+  color: #fff;
   text-decoration: none;
   transition: color 0.2s ease;
 }
