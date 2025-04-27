@@ -28,3 +28,37 @@ document.getElementById('reserve-btn').addEventListener('click', () => {
     return diffDays || 1;
   }
   
+
+// Show the review form
+document.getElementById('write-review-btn').addEventListener('click', () => {
+    document.getElementById('review-form').style.display = 'flex';
+  });
+  
+  // Handle new review submission
+  document.getElementById('review-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+  
+    const name = document.getElementById('reviewer-name').value.trim();
+    const rating = document.getElementById('reviewer-rating').value;
+    const text = document.getElementById('review-text').value.trim();
+  
+    if (!name || !rating || !text) {
+      alert('Please fill out all fields.');
+      return;
+    }
+  
+    const newReviewHTML = `
+      <div class="review">
+        <p><strong>${name}</strong> ${"⭐".repeat(rating)}</p>
+        <p>"${text}"</p>
+      </div>
+    `;
+  
+    const reviewsSection = document.querySelector('.reviews');
+    reviewsSection.innerHTML += newReviewHTML;
+  
+    // Reset form
+    document.getElementById('review-form').reset();
+    document.getElementById('review-form').style.display = 'none';
+  });
+  
