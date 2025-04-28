@@ -31,6 +31,72 @@
             toggleMenu.classList.toggle('active')
         }
      </script>
+    <div id="inbox_container">
+        <div id="message_list">
+            <h2>Inbox</h2>
+            <ul id="messages">
+                <li onclick="openConversation('Alice')">
+                    <strong>Alice</strong><br><span>Hey, are you free to party?</span>
+                </li>
+                <li onclick="openConversation('Bob')">
+                    <strong>Bob</strong><br><span>When's the next event?</span>
+                </li>
+                <li onclick="openConversation('Charlie')">
+                    <strong>Charlie</strong><br><span>Thanks for hosting!</span>
+                </li>
+            </ul>
+        </div>
+        <div id="conversation">
+            <h2 id="conversation_with">Select a message</h2>
+            <div id="conversation_messages">
+            </div>
+            <div id="message_input_area">
+                <input type="text" id="message_input" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const conversations = {
+            'Alice': [
+                {from: 'Alice', text: 'Hey, are you free to party?'},
+                {from: 'You', text: 'Yes! When and where?'}
+            ],
+            'Bob': [
+                {from: 'Bob', text: 'When\'s the next event?'},
+                {from: 'You', text: 'Planning for Friday night!'}
+            ],
+            'Charlie': [
+                {from: 'Charlie', text: 'Thanks for hosting!'},
+                {from: 'You', text: 'Glad you had fun!'}
+            ]
+        };
+    
+        let currentConversation = '';
+    
+        function openConversation(name) {
+            currentConversation = name;
+            document.getElementById('conversation_with').innerText = `Chat with ${name}`;
+            const convoDiv = document.getElementById('conversation_messages');
+            convoDiv.innerHTML = '';
+            conversations[name].forEach(message => {
+                const p = document.createElement('p');
+                p.className = message.from === 'You' ? 'sent' : 'received';
+                p.innerText = `${message.text}`;
+                convoDiv.appendChild(p);
+            });
+        }
+    
+        function sendMessage() {
+            const input = document.getElementById('message_input');
+            const text = input.value.trim();
+            if (text && currentConversation) {
+                conversations[currentConversation].push({from: 'You', text});
+                openConversation(currentConversation);
+                input.value = '';
+            }
+        }
+    </script>
     <footer id="site_footer">
         <p>&copy; 2025 InstantParty. All rights reserved.</p>
         <div class="footer-links">
