@@ -141,10 +141,15 @@ main {
 
 
 /*Confirm payment*/
+
+.confirmation-wrapper {
+  margin-top: -120px;
+}
+
 .confirmation-page {
   text-align: center;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Manrope", sans-serif;
   margin-top: 150px;
 }
 
@@ -165,6 +170,7 @@ main {
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
   margin-bottom: 20px;
+  
 }
 
 #pay-now-btn {
@@ -229,7 +235,7 @@ main {
 /*Footer */
 #site_footer {
   background-color: #b8233e;
-  padding: 30px 20px;
+  padding: 10px 20px;
   text-align: center;
   font-size: 14px;
   color: #fff;
