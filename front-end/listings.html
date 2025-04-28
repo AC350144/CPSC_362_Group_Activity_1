@@ -16,7 +16,7 @@
   <body>
     <div id="profile_dropdown">
       <div class="profile" onclick="menuToggle()">
-        <img src="images/kuchipatchi.png" alt="Profile Image" width="100" />
+        <img src="images/profile.png" alt="Profile Image" width="100" />
       </div>
       <div class="menu">
         <h3>Username<br /><span>Location</span></h3>
@@ -138,7 +138,9 @@
             Centrally located in downtown Los Angeles, with a rooftop view and
             spacious interiors!
           </p>
-          <button class="reserve-button" href="#">Make a Reservation</button>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
         </div>
       </div>
     </div>
@@ -161,7 +163,9 @@
             cozy lounge seating under the stars, it offers a romantic ambiance
             just steps away from the ocean.
           </p>
-          <button class="reserve-button" href="#">Make a Reservation</button>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
         </div>
       </div>
     </div>
@@ -184,7 +188,9 @@
             and top-tier amenities — perfect for high-end living, unforgettable
             events, and exclusive escapes in the heart of Las Vegas.
           </p>
-          <button class="reserve-button" href="#">Make a Reservation</button>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
         </div>
       </div>
     </div>
@@ -208,7 +214,9 @@
             steps from the Strip. Perfect for unforgettable nights out, private
             parties, and late-night adventures.
           </p>
-          <button class="reserve-button" href="#">Make a Reservation</button>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
         </div>
       </div>
     </div>
@@ -236,7 +244,136 @@
             alike, this penthouse is the ultimate place to play and relax in
             style.
           </p>
-          <button class="reserve-button" href="#">Make a Reservation</button>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="listing_pic">
+      <div
+        class="listing_card"
+        data-location="Austin, TX"
+        data-guests="15"
+        data-price="300"
+      >
+        <img src="images/TX_listing.png" alt="Party Venue 6" />
+        <div class="info">
+          <h4>Rustic Barn Venue</h4>
+          <p>Austin, TX · $300/night</p>
+        </div>
+        <div class="details">
+          <p>
+            Celebrate in true Texan style! This rustic barn features open
+            spaces, fairy lights, and countryside charm — ideal for weddings,
+            reunions, and big celebrations just outside Austin.
+          </p>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW LISTING 7 -->
+    <div class="listing_pic">
+      <div
+        class="listing_card"
+        data-location="Miami, FL"
+        data-guests="40"
+        data-price="600"
+      >
+        <img src="images/FL_listing.png" alt="Party Venue 7" />
+        <div class="info">
+          <h4>Luxury Beachfront Villa</h4>
+          <p>Miami, FL · $600/night</p>
+        </div>
+        <div class="details">
+          <p>
+            Host glamorous parties at this sprawling beachfront villa. Featuring
+            a private pool, ocean views, modern amenities, and direct beach
+            access — perfect for upscale events and tropical celebrations.
+          </p>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW LISTING 8 -->
+    <div class="listing_pic">
+      <div
+        class="listing_card"
+        data-location="Chicago, IL"
+        data-guests="25"
+        data-price="400"
+      >
+        <img src="images/IL_listing.png" alt="Party Venue 8" />
+        <div class="info">
+          <h4>Rooftop Party Deck</h4>
+          <p>Chicago, IL · $400/night</p>
+        </div>
+        <div class="details">
+          <p>
+            Take your party to new heights! This downtown Chicago rooftop deck
+            offers sweeping skyline views, stylish decor, and enough space for
+            unforgettable evenings under the stars.
+          </p>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- NEW LISTING 9 -->
+    <div class="listing_pic">
+      <div
+        class="listing_card"
+        data-location="Denver, CO"
+        data-guests="12"
+        data-price="280"
+      >
+        <img src="images/CO_listing.png" alt="Party Venue 9" />
+        <div class="info">
+          <h4>Mountain View Cabin</h4>
+          <p>Denver, CO · $280/night</p>
+        </div>
+        <div class="details">
+          <p>
+            Escape to the mountains in this cozy cabin with breathtaking views.
+            Featuring a spacious outdoor patio, fire pit, and rustic interiors —
+            perfect for intimate gatherings and nature lovers.
+          </p>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW LISTING 10 -->
+    <div class="listing_pic">
+      <div
+        class="listing_card"
+        data-location="Nashville, TN"
+        data-guests="18"
+        data-price="320"
+      >
+        <img src="images/TN_listing.png" alt="Party Venue 10" />
+        <div class="info">
+          <h4>Music City Loft</h4>
+          <p>Nashville, TN · $320/night</p>
+        </div>
+        <div class="details">
+          <p>
+            Party like a true star at this Nashville loft! Featuring a stylish
+            open-concept space, music-themed decor, and a rooftop deck for live
+            performances or lively nights out.
+          </p>
+          <a class="reserve-button" href="property_details.html">
+            View Details
+          </a>
         </div>
       </div>
     </div>
@@ -282,13 +419,6 @@
           if (e.target.classList.contains("reserve-button")) return;
 
           listing.classList.toggle("show-details"); // Toggle show-details class
-        });
-      });
-      const reserveButtons = document.querySelectorAll(".reserve-button");
-      reserveButtons.forEach((button) => {
-        button.addEventListener("click", function (e) {
-          e.stopPropagation();
-          alert("Reservation process started!");
         });
       });
     </script>
