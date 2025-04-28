@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font: cereal;
+  font-family: "Manrope", sans-serif;
   flex: 1;
 }
 
@@ -142,7 +142,7 @@ main {
   max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
+  margin-top: -150px;
   margin-bottom: 40px;
 }
 
@@ -254,7 +254,7 @@ textarea {
 .post-button {
   width: 100%;
   padding: 14px;
-  background-color: #4CAF50;
+  background-color: #2a9d8f;
   color: white;
   font-size: 16px;
   border: none;
@@ -264,7 +264,7 @@ textarea {
 }
 
 .post-button:hover {
-  background-color: #45a049;
+  background-color: #237d72;
 }
 
 .view-listing-btn {

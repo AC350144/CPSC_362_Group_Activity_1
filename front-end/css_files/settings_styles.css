@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font: cereal;
+    font-family: "Manrope", sans-serif;
     flex: 1;
     background: linear-gradient(135deg, #e63946 0%, #457b9d 100%);
 }
@@ -123,76 +123,6 @@ main {
 
     #profile_dropdown .menu ul li:hover a {
       color: #d27d54;
-    }
-
-    #search_bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: -60px;
-      margin-bottom: 40px;
-    }
-
-    #search_bar .container form {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: #fff;
-      border-radius: 40px;
-      padding: 12px 20px;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
-      flex-wrap: wrap;
-    }
-
-    #search_bar label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 14px;
-      font-weight: 650;
-    }
-
-    #search_bar .form-group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #search_bar input[type="text"],
-    #search_bar input[type="date"],
-    #search_bar input[type="number"] {
-      border: none;
-      padding: 10px 14px;
-      border-radius: 30px;
-      font-size: 14px;
-      width: 160px;
-      background: #f9f9f9;
-      transition: background 0.3s ease;
-    }
-
-    #search_bar input[type="text"]:focus,
-    #search_bar input[type="date"]:focus,
-    #search_bar input[type="number"]:focus {
-      outline: none;
-      background: #fff;
-      box-shadow: 0 0 0 2px #ddd;
-    }
-
-    .search-button {
-      background: linear-gradient(to right, #FF6B6B, #4D96FF, #59C173);
-      border: none;
-      border-radius: 50%;
-      padding: 10px;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .search-button:hover {
-      transform: scale(1.1);
-    }
-
-    .search-button svg {
-      padding: 0 20px 25px 0;
     }
 
 /*Welcome Header*/

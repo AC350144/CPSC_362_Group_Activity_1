@@ -117,6 +117,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    margin-top: -150px;
   }
   
   /* Airbnb-style Gallery */
@@ -352,7 +353,7 @@ body {
   }
   
   #submit-review-btn {
-    background-color: #FF385C;
+    background-color: #2a9d8f;
     color: white;
     padding: 10px;
     font-size: 16px;
@@ -360,8 +361,10 @@ body {
     border-radius: 8px;
     cursor: pointer;
   }
-  
 
+  #submit-review-btn:hover{
+    background-color: #237d72;
+  }
   
   #site_footer {
     background-color: #b8233e;
