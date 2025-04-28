@@ -40,27 +40,27 @@
 
 <!--Confirm payment-->
   <main>
-    <div class="confirmation-page">
+  <div class="confirmation-wrapper">
+
+    <div class="confirmation-card"> <!-- NEW CARD WRAPPER -->
+
+      <!-- Billing info -->
       <div id="billing-info">
         <h1 id="listing-name">[Listing Name Placeholder]</h1>
         <h2>Booking Summary</h2>
-        <!-- Rental details section -->
         <div class="rental-section">
           <p><strong>Rental Stay:</strong> 5 nights</p>
           <p><strong>Rental Price:</strong> $100/night</p>
         </div>
-
-        <!-- Money related section -->
         <div class="money-section">
           <p><strong>Subtotal:</strong> $500.00</p>
           <p><strong>Taxes:</strong> $50.00</p>
           <p><strong>Total:</strong> $550.00</p>
         </div>
-
-        <!-- Payment method selection -->
         <div class="payment-section">
           <label for="payment-method"><strong>Select Payment Method:</strong></label><br>
-          <select id="payment-method" onchange="handlePaymentMethod()" style="margin: 10px 0; padding: 8px; width: 100%;">
+          <select id="payment-method" onchange="handlePaymentMethod()"
+            style="margin: 10px 0; padding: 8px; width: 100%;">
             <option value="" selected disabled>Select saved card...</option>
             <option value="card1">Visa ending in 1234</option>
             <option value="card2">MasterCard ending in 5678</option>
@@ -71,32 +71,32 @@
         <button id="pay-now-btn" onclick="confirmPayment()">Confirm & Proceed</button>
       </div>
 
-    </div>
-
-    <div class="confirmation-wrapper">
+      <!-- Confirmation message -->
       <div id="confirmation-message" style="display: none; text-align: center; padding: 40px;">
-      <h2 style="color: green;">✅ Payment Confirmed</h2>
-      <p><strong>Thank you for your payment.</strong> Your rental of <strong>[listing name]</strong> has been confirmed.</p>
-      <p>A receipt has been emailed to: <strong>youremail@gmail.com</strong></p>
+        <h2 style="color: green;">✅ Payment Confirmed</h2>
+        <p><strong>Thank you for your payment.</strong> Your rental of <strong>[listing name]</strong> has been
+          confirmed.</p>
+        <p>A receipt has been emailed to: <strong>youremail@gmail.com</strong></p>
 
-      <div
-        style="border: 1px solid #ccc; padding: 20px; margin: 30px auto; width: 350px; background: #f3f3f3; text-align: left;">
-        <h3 style="margin-top: 0;">Booking Summary</h3>
-        <p><strong>Rental Stay:</strong> 5 nights</p>
-        <p><strong>Rental Price:</strong> $100/night</p>
-        <p><strong>Subtotal:</strong> $500.00</p>
-        <p><strong>Taxes:</strong> $50.00</p>
-        <p><strong>Total:</strong> $550.00</p>
+        <div
+          style="border: 1px solid #ccc; padding: 20px; margin: 30px auto; width: 350px; background: #f3f3f3; text-align: left;">
+          <h3 style="margin-top: 0;">Booking Summary</h3>
+          <p><strong>Rental Stay:</strong> 5 nights</p>
+          <p><strong>Rental Price:</strong> $100/night</p>
+          <p><strong>Subtotal:</strong> $500.00</p>
+          <p><strong>Taxes:</strong> $50.00</p>
+          <p><strong>Total:</strong> $550.00</p>
+        </div>
+
+        <a href="home.html">
+          <button class="return-home-btn">Return to Home</button>
+        </a>
       </div>
 
-      <a href="home.html">
-        <button class="return-home-btn">Return to Home</button>
-      </a>
-    </div>
-    </div>
+    </div> <!-- END CARD WRAPPER -->
 
-
-  </main>
+  </div>
+</main>
 
 <!--Footer-->
   <footer id="site_footer">
