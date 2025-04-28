@@ -248,7 +248,7 @@ body {
 }
 
 .reserve-button {
-  background-color: #e14b4f;
+  background-color: #2a9d8f;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -264,12 +264,12 @@ body {
 }
 
 .reserve-button:hover {
-  background-color: #58b533;
+  background-color: #21867a;
   transform: translateY(-2px);
 }
 
 .reserve-button:active {
-  background-color: #58b533;
+  background-color: #21867a;
   transform: translateY(0);
 }
 
