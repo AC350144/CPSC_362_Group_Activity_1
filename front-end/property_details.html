@@ -12,27 +12,27 @@
             <img src="images/logo.png" alt="InstantParty Logo" class="logo-img" width="175">
         </a>
     </div>
-    <div id="profile_dropdown">
-      <div class="profile" onclick="menuToggle()">
-          <img src="images/profile.png" alt="Profile Picture">
-      </div>
-      <div class="menu">
-          <h3>Username<br><span>Location</span></h3>
-          <ul>
-              <li><img src="images/user.png" width="50"><a href="profile_settings.html">My Profile</a></li>
-              <li><img src="images/settings.png" width="50"><a href="settings.html">Settings</a></li>
-              <li><img src="images/profile.png" width="50"><a href="inbox.html">Inbox</a></li>
-              <li><img src="images/balloons.png" width="50"><a href="host_space.html">Host your space</a></li>
-              <li><img src="images/logout.png" width="50"><a href="login.html">Logout</a></li>
-          </ul>
-      </div>
-   </div>
-   <script>
-      function menuToggle(){
-          const toggleMenu = document.querySelector('.menu')
-          toggleMenu.classList.toggle('active')
-      }
-   </script>
+    <!-- ------------------Profile Dropdown---------------- -->
+  <div id="profile_dropdown">
+    <div class="profile" onclick="menuToggle()">
+      <img src="images/profile.png" alt="Profile Picture">
+    </div>
+    <div class="menu">
+      <h3>Username<br><span>Location</span></h3>
+        <ul>
+          <li><img src="images/user.png"><a href="profile_settings.html">My Profile</a></li>
+          <li><img src="images/settings.png"><a href="settings.html">Settings</a></li>
+          <li><img src="images/balloons.png"><a href="host_space.html">Host your space</a></li>
+          <li><img src="images/logout.png"><a href="login.html">Logout</a></li>
+        </ul>
+    </div>
+  </div>
+  <script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector('.menu')
+      toggleMenu.classList.toggle('active')
+    }
+  </script>
 <div class="container">
 
     <div class="white-card-container">
