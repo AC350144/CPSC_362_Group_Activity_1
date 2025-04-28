@@ -132,6 +132,7 @@ main {
   display: flex;
   justify-content: center;
   padding: 40px 20px;
+  margin-top: -150px;
 }
 
 .payment-box {
