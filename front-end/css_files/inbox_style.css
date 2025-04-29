@@ -11,6 +11,17 @@ body{
     background: linear-gradient(135deg, #e63946 0%, #457b9d 100%);
 }
 
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+}
+
 #logo{
     padding: 25px 0 0 50px;
 }
@@ -237,7 +248,7 @@ body{
     text-align: center;
     font-size: 14px;
     color: #fff;
-    margin-top: 50px;
+    margin-top: auto;
 }
 
 #site_footer .footer-links {
