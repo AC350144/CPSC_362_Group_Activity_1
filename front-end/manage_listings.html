@@ -1,80 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>InstantParty | Manage Listings</title>
-    <link rel="stylesheet" href="css_files/manage_listings_style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css_files/manage_listings_style.css" />
+  </head>
+  <body>
     <!-- Logo -->
     <div id="logo">
-        <a href="home.html">
-            <img src="images/logo.png" alt="InstantParty Logo" class="logo-img" width="175">
-        </a>
+      <a href="home.html">
+        <img
+          src="images/logo.png"
+          alt="InstantParty Logo"
+          class="logo-img"
+          width="175"
+        />
+      </a>
     </div>
 
     <!-- Profile Dropdown -->
     <div id="profile_dropdown">
-        <div class="profile" onclick="menuToggle()">
-            <img src="images/profile.png" alt="Profile Picture">
-        </div>
-        <div class="menu">
-            <h3>Username<br><span>Location</span></h3>
-            <ul>
-                <li><img src="images/user.png" width="50"><a href="profile_settings.html">My Profile</a></li>
-                <li><img src="images/settings.png" width="50"><a href="settings.html">Settings</a></li>
-                <li><img src="images/inbox.png" width="50"><a href="inbox.html">Inbox</a></li>
-                <li><img src="images/manage.png" width="50"><a href="manage_listings.html">Manage your spaces</a></li>
-                <li><img src="images/balloons.png" width="50"><a href="host_space.html">Host your space</a></li>
-                <li><img src="images/logout.png" width="50"><a href="login.html">Logout</a></li>
-            </ul>
-        </div>
+      <div class="profile" onclick="menuToggle()">
+        <img src="images/profile.png" alt="Profile Picture" />
+      </div>
+      <div class="menu">
+        <h3>Username<br /><span>Location</span></h3>
+        <ul>
+          <li>
+            <img src="images/user.png" width="50" /><a
+              href="profile_settings.html"
+              >My Profile</a
+            >
+          </li>
+          <li>
+            <img src="images/settings.png" width="50" /><a href="settings.html"
+              >Settings</a
+            >
+          </li>
+          <li>
+            <img src="images/inbox.png" width="50" /><a href="inbox.html"
+              >Inbox</a
+            >
+          </li>
+          <li>
+            <img src="images/manage.png" width="50" /><a
+              href="manage_listings.html"
+              >Manage your spaces</a
+            >
+          </li>
+          <li>
+            <img src="images/balloons.png" width="50" /><a
+              href="host_space.html"
+              >Host your space</a
+            >
+          </li>
+          <li>
+            <img src="images/logout.png" width="50" /><a href="login.html"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- Listings Management -->
     <main id="listings_main">
-        <section class="listings-section">
-            <h2>Your Created Listings</h2>
-            <div class="listings-grid">
-                <!-- Example created listing -->
-                <div class="listing-card">
-                    <h3>Birthday Party at Central Park</h3>
-                    <p>Date: May 15, 2025</p>
-                    <p>Guests: 50</p>
-                    <button class="remove-btn">Remove</button>
-                </div>
-                <!-- Add more created listings here -->
-            </div>
-        </section>
+      <section class="listings-section">
+        <h2>Your Created Listings</h2>
+        <div class="listings-grid">
+          <!-- Example created listing -->
+          <div class="listing-card">
+            <h3>Birthday Party at Central Park</h3>
+            <p>Date: May 15, 2025</p>
+            <p>Guests: 50</p>
+            <button class="remove-btn">Remove</button>
+          </div>
+          <!-- Add more created listings here -->
+        </div>
+      </section>
 
-        <section class="listings-section reserved-listings">
-            <h2>Your Reserved Listings</h2>
-            <div class="listings-grid">
-                <!-- Example reserved listing -->
-                <div class="listing-card">
-                    <h3>Graduation Bash Downtown</h3>
-                    <p>Date: June 1, 2025</p>
-                    <p>Guests: 20</p>
-                    <button class="cancel-btn">Cancel</button>
-                </div>
-                <!-- Add more reserved listings here -->
-            </div>
-        </section>
+      <section class="listings-section reserved-listings">
+        <h2>Your Reserved Listings</h2>
+        <div class="listings-grid">
+          <!-- Example reserved listing -->
+          <div class="listing-card">
+            <h3>Graduation Bash Downtown</h3>
+            <p>Date: June 1, 2025</p>
+            <p>Guests: 20</p>
+            <button class="cancel-btn">Cancel</button>
+          </div>
+          <!-- Add more reserved listings here -->
+        </div>
+      </section>
     </main>
 
     <footer id="site_footer">
-        <p>&copy; 2025 InstantParty. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="terms.html">Support</a>
-        </div>
+      <p>&copy; 2025 InstantParty. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
     </footer>
 
     <script>
-        function menuToggle(){
-            const toggleMenu = document.querySelector('.menu');
-            toggleMenu.classList.toggle('active');
-        }
+      function menuToggle() {
+        const toggleMenu = document.querySelector(".menu");
+        toggleMenu.classList.toggle("active");
+      }
     </script>
-</body>
+  </body>
 </html>
