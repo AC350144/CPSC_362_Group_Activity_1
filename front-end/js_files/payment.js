@@ -2,26 +2,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
   form.addEventListener("submit", (e) => {
-    // Get inputs
     const name = document.getElementById("card-name").value.trim();
     const number = document.getElementById("card-number").value.trim();
     const expiry = document.getElementById("expiry").value.trim();
     const cvv = document.getElementById("cvv").value.trim();
 
-    // Fake validation to simulate a real site
     if (!name || number.length < 12 || !/^\d{2}\/\d{2}$/.test(expiry) || cvv.length < 3) {
       alert("Please fill out all payment fields correctly.");
-      e.preventDefault(); // Block submission
+      e.preventDefault();
     } else {
-      alert("Payment submitted! Redirecting to confirmation...");
-      // Optional slight delay to feel like processing
-      setTimeout(() => {
-        window.location.href = "confirmation.html";
-      }, 1000);
+      e.preventDefault(); // stop actual form submission
 
-      e.preventDefault(); // Comment this out if you use actual form action
+      // Change button to "Processing..."
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = "Processing...";
+
+      setTimeout(() => {
+        window.location.href = "confirm.html";
+      }, 1000);
     }
   });
+
 });
 
 const cardTypeSelect = document.getElementById("card-type");
@@ -50,4 +52,15 @@ cardTypeSelect.addEventListener("change", () => {
   }
 
   cardImage.style.display = "block";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cardTypeSelect = document.getElementById("card-type");
+  const cardImage = document.getElementById("card-image");
+
+  // Force reset dropdown on page load
+  cardTypeSelect.value = "";
+  cardImage.style.display = "none";
+
+  // ... existing code
 });
