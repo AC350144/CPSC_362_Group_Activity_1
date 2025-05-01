@@ -7,241 +7,245 @@
     <link rel="stylesheet" href="css_files/home_style.css" />
   </head>
   <body>
-    <!-- -----------------------Logo----------------------- -->
-    <div id="logo">
-      <a href="home.html">
-        <img
-          src="images/logo.png"
-          alt="InstantParty Logo"
-          class="logo-img"
-          width="175"
-        />
-      </a>
-    </div>
-    <!-- ------------------Profile Dropdown---------------- -->
-    <div id="profile_dropdown">
-      <div class="profile" onclick="menuToggle()">
-        <img src="images/profile.png" alt="Profile Picture" />
+    <div id="page-wrapper">
+      <!-- -----------------------Logo----------------------- -->
+      <div id="logo">
+        <a href="home.html">
+          <img
+            src="images/logo.png"
+            alt="InstantParty Logo"
+            class="logo-img"
+            width="175"
+          />
+        </a>
       </div>
-      <div class="menu">
-        <h3>Username<br /><span>Location</span></h3>
-        <ul>
-          <li>
-            <img src="images/user.png" width="50" /><a
-              href="profile_settings.html"
-              >My Profile</a
-            >
-          </li>
-          <li>
-            <img src="images/settings.png" width="50" /><a href="settings.html"
-              >Settings</a
-            >
-          </li>
-          <li>
-            <img src="images/inbox.png" width="50" /><a href="inbox.html"
-              >Inbox</a
-            >
-          </li>
-          <li>
-            <img src="images/manage.png" width="50" /><a
-              href="manage_listings.html"
-              >Manage your spaces</a
-            >
-          </li>
-          <li>
-            <img src="images/balloons.png" width="50" /><a
-              href="host_space.html"
-              >Host your space</a
-            >
-          </li>
-          <li>
-            <img src="images/logout.png" width="50" /><a href="login.html"
-              >Logout</a
-            >
-          </li>
-        </ul>
+      <!-- ------------------Profile Dropdown---------------- -->
+      <div id="profile_dropdown">
+        <div class="profile" onclick="menuToggle()">
+          <img src="images/profile.png" alt="Profile Picture" />
+        </div>
+        <div class="menu">
+          <h3>Username<br /><span>Location</span></h3>
+          <ul>
+            <li>
+              <img src="images/user.png" width="50" /><a
+                href="profile_settings.html"
+                >My Profile</a
+              >
+            </li>
+            <li>
+              <img src="images/settings.png" width="50" /><a href="settings.html"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <img src="images/inbox.png" width="50" /><a href="inbox.html"
+                >Inbox</a
+              >
+            </li>
+            <li>
+              <img src="images/manage.png" width="50" /><a
+                href="manage_listings.html"
+                >Manage your spaces</a
+              >
+            </li>
+            <li>
+              <img src="images/balloons.png" width="50" /><a
+                href="host_space.html"
+                >Host your space</a
+              >
+            </li>
+            <li>
+              <img src="images/logout.png" width="50" /><a href="login.html"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <script>
-      function menuToggle() {
-        const toggleMenu = document.querySelector(".menu");
-        toggleMenu.classList.toggle("active");
-      }
-    </script>
-    <!-- --------------------Search Bar-------------------- -->
-    <div id="search_bar">
-      <div class="container">
-        <form method="GET">
-          <div class="form-group">
-            <label for="destination">Where</label>
-            <input
-              type="text"
-              id="destination"
-              name="destination"
-              list="destinations"
-              placeholder="Search destinations"
-              style="width: 150px"
-            />
+      <script>
+        function menuToggle() {
+          const toggleMenu = document.querySelector(".menu");
+          toggleMenu.classList.toggle("active");
+        }
+      </script>
+      <!-- --------------------Search Bar-------------------- -->
+      <div id="search_bar">
+        <div class="container">
+          <form method="GET">
+            <div class="form-group">
+              <label for="destination">Where</label>
+              <input
+                type="text"
+                id="destination"
+                name="destination"
+                list="destinations"
+                placeholder="Search destinations"
+                style="width: 150px"
+              />
 
-            <datalist id="destinations">
-              <option value="Las Vegas, NV"></option>
-              <option value="San Diego, CA"></option>
-              <option value="Seattle, WA"></option>
-              <option value="Los Angeles, CA"></option>
-            </datalist>
-          </div>
+              <datalist id="destinations">
+                <option value="Las Vegas, NV"></option>
+                <option value="San Diego, CA"></option>
+                <option value="Seattle, WA"></option>
+                <option value="Los Angeles, CA"></option>
+              </datalist>
+            </div>
 
-          <div class="form-group">
-            <label for="check_in_date">Check in</label>
-            <input
-              type="text"
-              id="check_in_date"
-              name="check_in_date"
-              placeholder="Add dates"
-              onfocus="(this.type='date')"
-              style="width: 125px"
-            />
-          </div>
+            <div class="form-group">
+              <label for="check_in_date">Check in</label>
+              <input
+                type="text"
+                id="check_in_date"
+                name="check_in_date"
+                placeholder="Add dates"
+                onfocus="(this.type='date')"
+                style="width: 125px"
+              />
+            </div>
 
-          <div class="form-group">
-            <label for="check_out_date">Check out</label>
-            <input
-              type="text"
-              id="check_out_date"
-              name="check_out_date"
-              placeholder="Add dates"
-              onfocus="(this.type='date')"
-              style="width: 125px"
-            />
-          </div>
+            <div class="form-group">
+              <label for="check_out_date">Check out</label>
+              <input
+                type="text"
+                id="check_out_date"
+                name="check_out_date"
+                placeholder="Add dates"
+                onfocus="(this.type='date')"
+                style="width: 125px"
+              />
+            </div>
 
-          <div class="form-group">
-            <label for="num_of_guests">Who</label>
-            <input
-              type="number"
-              id="num_of_guests"
-              name="num_of_guests"
-              placeholder="Add guests"
-              style="width: 125px"
-            />
-          </div>
+            <div class="form-group">
+              <label for="num_of_guests">Who</label>
+              <input
+                type="number"
+                id="num_of_guests"
+                name="num_of_guests"
+                placeholder="Add guests"
+                style="width: 125px"
+              />
+            </div>
 
-          <button type="submit" class="search-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              style="fill: beige; transform: scale(1.25)"
-            >
-              <path
-                d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
-              ></path>
-            </svg>
-          </button>
-        </form>
+            <button type="submit" class="search-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: beige; transform: scale(1.25)"
+              >
+                <path
+                  d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
-    <!-- ---------------------Listings--------------------- -->
-    <div id="listings">
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
+      <!-- ---------------------Listings--------------------- -->
+      <div id="listings-container">
+        <div id="listings">
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
+          <a href="property_details.html" class="rental_listing" target="_blank">
+            <div class="rental_card">
+              <img src="images/rental.png" class="rental_image" />
+              <div class="rental_details">
+                <div class="rating">★ 4.78</div>
+                <h3>Las Vegas, Nevada</h3>
+                <p>Near the Las Vegas Strip</p>
+                <p1><span class="price">$105</span> for 1 night</p1>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
-        </div>
-      </a>
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
-        </div>
-      </a>
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
-        </div>
-      </a>
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
-        </div>
-      </a>
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
-        </div>
-      </a>
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
-        </div>
-      </a>
-      <a href="property_details.html" class="rental_listing" target="_blank">
-        <div class="rental_card">
-          <img src="images/rental.png" class="rental_image" />
-          <div class="rental_details">
-            <div class="rating">★ 4.78</div>
-            <h3>Las Vegas, Nevada</h3>
-            <p>Near the Las Vegas Strip</p>
-            <p1><span class="price">$105</span> for 1 night</p1>
-          </div>
-        </div>
-      </a>
-    </div>
-    <!-- button -->
-    <button class="scroll-to-top" onclick="scrollToTop()">
-      Not finding what you're looking for? Try the search bar at the top!
-    </button>
-    <script>
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
+      </div>
+      <!-- button -->
+      <button class="scroll-to-top" onclick="scrollToTop()">
+        Not finding what you're looking for? Try the search bar at the top!
+      </button>
+      <script>
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      </script>
+    </div>  
     <!-- ---------------------------Footer--------------------------- -->
     <footer id="site_footer">
       <p>&copy; 2025 InstantParty. All rights reserved.</p>
@@ -251,5 +255,40 @@
         <a href="support.html">Support</a>
       </div>
     </footer>
+    <script>
+      window.onload = async function () {
+        try {
+          const response = await fetch('http://localhost:5000/api/listings');
+          const listings = await response.json();
+    
+          const listingsContainer = document.getElementById('listings');
+          listingsContainer.innerHTML = '';
+    
+          listings.forEach(listing => {
+            const listingDiv = document.createElement('a');
+            listingDiv.classList.add('rental_listing');
+            listingDiv.href = 'property_details.html';
+    
+            const imageUrl = listing.imageUrls.length > 0 ? listing.imageUrls[0] : 'images/rental.png';
+    
+            listingDiv.innerHTML = `
+              <div class="rental_card">
+                <img src="${imageUrl}" class="rental_image" alt="${listing.name}" /> <!-- Dynamic image -->
+                <div class="rental_details">
+                  <div class="rating">★ 4.5</div> <!-- Update rating dynamically if available -->
+                  <h3>${listing.name}</h3> <!-- Listing name -->
+                  <p>${listing.shortDescription}</p> <!-- Listing description -->
+                  <p1><span class="price">$${listing.price}</span> for 1 night</p1> <!-- Price -->
+                </div>
+              </div>
+            `;
+    
+            listingsContainer.appendChild(listingDiv);
+          });
+        } catch (error) {
+          console.error('Error fetching listings:', error);
+        }
+      };
+    </script>    
   </body>
 </html>
