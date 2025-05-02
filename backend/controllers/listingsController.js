@@ -1,39 +1,43 @@
 const Listing = require('../models/Listing');
 
 const createListing = async (req, res) => {
-  const { 
-    name, 
-    shortDescription, 
-    longDescription, 
-    price, 
-    location, 
-    address, 
-    city, 
-    state, 
-    country, 
-    zip, 
-    imageUrls
-  } = req.body;
-
   try {
-    const newListing = new Listing({
+    const imageUrls = req.files.map(file => `/uploads/${file.filename}`);
+
+    const {
       name,
-      shortDescription, 
+      shortDescription,
       longDescription,
       price,
-      location,
       address,
       city,
       state,
       country,
       zip,
-      imageUrls
+      checkin,
+      checkout,
+    } = req.body;
+
+    const newListing = new Listing({
+      name,
+      shortDescription,
+      longDescription,
+      price,
+      address,
+      city,
+      state,
+      country,
+      zip,
+      checkin,
+      checkout,
+      imageUrls,
     });
 
     await newListing.save();
     res.status(201).json(newListing);
   } catch (error) {
-    res.status(500).json({ message: 'Error creating listing', error });
+    console.error('Listing creation error:', error);
+    res.status(500).json({ message: 'Error creating listing', error: error.message });
   }
 };
 

@@ -74,25 +74,25 @@
       <div class="host-container">
         <h1>Host Your Rental</h1>
 
-        <form id="rentalForm">
+        <form id="rentalForm" action="http://localhost:3000/api/listings" method="POST" enctype="multipart/form-data">
           <!-- Rental Info -->
           <section class="form-section">
             <h2>Rental Info</h2>
             <label for="name">Rental Name:</label>
             <input type="text" id="name" name="name" required />
 
-            <label for="description">A brief summary of the property (1 sentence):</label>
+            <label for="shortDescription">A brief summary of the property (1 sentence):</label>
             <textarea
-              id="description"
-              name="description"
+              id="shortDescription"
+              name="shortDescription"
               rows="4"
               required
             ></textarea>
 
-            <label for="description">A detailed description of the property:</label>
+            <label for="longDescription">A detailed description of the property:</label>
             <textarea
-              id="description"
-              name="description"
+              id="longDescription"
+              name="longDescription"
               rows="4"
               required
             ></textarea>
@@ -130,60 +130,17 @@
 
           <!-- Availability -->
           <section class="form-section">
-            <h2>Availability</h2>
-            <div class="days-toggle">
-              <label
-                ><input type="checkbox" name="days" value="Monday" />
-                Monday</label
-              >
-              <label
-                ><input type="checkbox" name="days" value="Tuesday" />
-                Tuesday</label
-              >
-              <label
-                ><input type="checkbox" name="days" value="Wednesday" />
-                Wednesday</label
-              >
-              <label
-                ><input type="checkbox" name="days" value="Thursday" />
-                Thursday</label
-              >
-              <label
-                ><input type="checkbox" name="days" value="Friday" />
-                Friday</label
-              >
-              <label
-                ><input type="checkbox" name="days" value="Saturday" />
-                Saturday</label
-              >
-              <label
-                ><input type="checkbox" name="days" value="Sunday" />
-                Sunday</label
-              >
-            </div>
-
-            <div class="unavailable-section">
-              <h3>
-                Unavailable Dates: <span id="dateCount">(1 date selected)</span>
-              </h3>
-              <div id="unavailableDatesContainer">
-                <input
-                  type="text"
-                  name="unavailableDates[]"
-                  placeholder="Add Date"
-                  class="fake-date"
-                />
-              </div>
-              <button type="button" class="add-date-btn">
-                + Add Another Date
-              </button>
-            </div>
+            <h2>Dates</h2>
+            <label for="checkin">Check-in Date:</label>
+            <input type="text" id="checkin" name="checkin" placeholder="Add dates" onfocus="(this.type='date')" required />
+            <label for="checkout">Check-out Date:</label>
+            <input type="text" id="checkout" name="checkout" placeholder="Add dates" onfocus="(this.type='date')" required />
           </section>
 
           <!-- Image Upload -->
           <section class="form-section">
             <h2>Upload Images</h2>
-            <input type="file" id="photos" name="photos" multiple />
+            <input type="file" name="images" multiple />
           </section>
 
           <!-- Pricing -->
@@ -217,7 +174,31 @@
       </div>
     </footer>
 
-    <!--JavaScript-->
-    <script src="js_files/host_space.js"></script>
+    <script>
+      const form = document.querySelector('form');
+      const confirmation = document.getElementById('confirmation');
+    
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+    
+        const formData = new FormData(form);
+    
+        try {
+          const response = await fetch('http://localhost:5000/api/listings', {
+            method: 'POST',
+            body: formData
+          });
+    
+          if (response.ok) {
+            window.location.href = 'home.html'; // Redirect to homepage
+          } else {
+            alert('Error creating listing');
+          }
+        } catch (error) {
+          console.error('Failed to submit:', error);
+          alert('Network error occurred.');
+        }
+      });
+    </script>
   </body>
 </html>
