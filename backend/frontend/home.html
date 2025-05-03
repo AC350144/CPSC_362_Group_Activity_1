@@ -258,7 +258,7 @@
     <script>
       window.onload = async function () {
         try {
-          const response = await fetch('http://localhost:5000/api/listings');
+          const response = await fetch('/api/listings');
           const listings = await response.json();
     
           const listingsContainer = document.getElementById('listings');
@@ -268,15 +268,14 @@
             const listingDiv = document.createElement('a');
             listingDiv.classList.add('rental_listing');
             listingDiv.href = 'property_details.html';
-            console.log('Image URL:', listing.imageUrls);
     
             const imageUrl = listing.imageUrls.length > 0 ? listing.imageUrls[0] : 'images/rental.png';
-    
+
             console.log("Image URL:", listing.imageUrls[0]);
 
             listingDiv.innerHTML = `
               <div class="rental_card">
-                <img src="http://localhost:5000${listing.imageUrls[0]}" class="rental_image" alt="${listing.name}" /> <!-- change localhost part when necessary -->
+                <img src="${listing.imageUrls[0]}" class="rental_image" alt="${listing.name}" />
                 <div class="rental_details">
                   <div class="rating">★ 4.5</div>
                   <h3>${listing.name}</h3>

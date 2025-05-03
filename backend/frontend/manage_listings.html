@@ -66,16 +66,7 @@
     <main id="listings_main">
       <section class="listings-section">
         <h2>Your Created Listings</h2>
-        <div class="listings-grid">
-          <!-- Example created listing -->
-          <div class="listing-card">
-            <h3>Birthday Party at Central Park</h3>
-            <p>Date: May 15, 2025</p>
-            <p>Guests: 50</p>
-            <button class="remove-btn">Remove</button>
-          </div>
-          <!-- Add more created listings here -->
-        </div>
+        <div class="listings-grid" id="createdListings"></div>
       </section>
 
       <section class="listings-section reserved-listings">
@@ -107,6 +98,49 @@
         const toggleMenu = document.querySelector(".menu");
         toggleMenu.classList.toggle("active");
       }
+    </script>
+
+    <script>
+      async function loadListings() {
+        const response = await fetch('/api/listings');
+        const listings = await response.json();
+      
+        const container = document.getElementById('createdListings');
+        container.innerHTML = '';
+      
+        listings.forEach(listing => {
+          const card = document.createElement('div');
+          card.classList.add('listing-card');
+          card.innerHTML = `
+            <h3>${listing.name}</h3>
+            <p>Address: ${listing.address}</p>
+            <p>Price: $${listing.price}</p>
+            <button class="deleteBtn" data-id="${listing._id}">Delete</button>
+          `;
+          container.appendChild(card);
+        });
+      
+        document.querySelectorAll('.deleteBtn').forEach(button => {
+          button.addEventListener('click', async () => {
+            const listingId = button.getAttribute('data-id');
+            const confirmed = confirm('Are you sure you want to delete this listing?');
+            if (!confirmed) return;
+          
+            const res = await fetch(`/api/listings/${listingId}`, {
+              method: 'DELETE'
+            });
+          
+            if (res.ok) {
+              alert('Listing deleted');
+              loadListings();
+            } else {
+              alert('Error deleting listing');
+            }
+          });
+        });
+      }
+    
+      loadListings();
     </script>
   </body>
 </html>
