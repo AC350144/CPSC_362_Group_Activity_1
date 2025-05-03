@@ -24,24 +24,43 @@ exports.createBooking = async (req, res) => {
       res.status(500).json({ message: 'Server error' });
     }
 };
-  
 
 exports.cancelBooking = async (req, res) => {
     const { id } = req.params;
-    const userId = req.user._id;
   
     try {
-      const booking = await Booking.findOne({ _id: id, userId });
+      const booking = await Booking.findById(id);
+  
       if (!booking) {
-        return res.status(404).json({ message: 'Booking not found or not yours' });
+        return res.status(404).json({ message: 'Booking not found' });
       }
   
-      booking.status = 'cancelled';
-      await booking.save();
+      await Booking.findByIdAndDelete(id);
   
       res.status(200).json({ message: 'Booking cancelled successfully' });
     } catch (error) {
-      console.error(error);
+      console.error('Error cancelling booking:', error);
       res.status(500).json({ message: 'Error cancelling booking', error: error.message });
     }
   };
+
+exports.getBookingsByUser = async (req, res) => {
+    try {
+      const bookings = await Booking.find({ userId: req.params.userId });
+  
+      const enrichedBookings = await Promise.all(
+        bookings.map(async booking => {
+          const listing = await Listing.findById(booking.listingId);
+          return {
+            ...booking.toObject(),
+            listingName: listing ? listing.name : 'Unknown Listing'
+          };
+        })
+      );
+  
+      res.json(enrichedBookings);
+    } catch (err) {
+      console.error('Error fetching user bookings:', err);
+      res.status(500).json({ message: 'Error fetching bookings' });
+    }
+};

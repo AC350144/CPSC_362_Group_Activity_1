@@ -237,6 +237,7 @@
           const result = await response.json();
           if (response.ok) {
             alert('Booking successful!');
+            window.location.href = 'manage_listings.html';
           } else {
             alert('Booking failed: ' + result.message);
           }
