@@ -73,16 +73,9 @@
         <h2>Your Reserved Listings</h2>
         <div class="listings-grid">
           <!-- Example reserved listing -->
-          <div class="listing-card">
-            <div class="booking-card">
-              <h3>Graduation Bash Downtown</h3>
-              <p>Date: June 1, 2025</p>
-              <p>Guests: 20</p>
-              <button class="cancel-btn" data-id="bookingId">Cancel</button>
-            </div>
-          </div>
-          <!-- Add more reserved listings here -->
+          <div class="listings-card" id="reservedListings"> <div class="listing-card"> <div class="booking-card"></div></div></div>
         </div>
+          <!-- Add more reserved listings here -->
       </section>
     </main>
 
@@ -117,9 +110,7 @@
         const toggleMenu = document.querySelector(".menu");
         toggleMenu.classList.toggle("active");
       }
-    </script>
 
-    <script>
       async function loadListings() {
         const response = await fetch('/api/listings');
         const listings = await response.json();
@@ -167,23 +158,66 @@
           });
         });
       }
-    
-      document.querySelectorAll('.cancel-btn').forEach(button => {
-        button.addEventListener('click', async function () {
-          const bookingId = button.getAttribute('data-id');
-
-          const response = await fetch(`/api/bookings/${bookingId}`, {
-            method: 'DELETE',
-          });
         
-          const result = await response.json();
-          if (response.ok) {
-            alert('Booking cancelled successfully');
-          } else {
-            alert(result.message);
+      async function loadReservedBookings() {
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+          console.error('User ID is missing!');
+          return;
+        }
+      
+        try {
+          const response = await fetch(`/api/bookings/user/${userId}`);
+        
+          if (!response.ok) {
+            throw new Error('Booking API request failed');
           }
-        });
+        
+          const bookings = await response.json();
+
+          if (!bookings || bookings.length === 0) {
+            alert('No reserved listings found.');
+            return;
+          }
+        
+          const container = document.getElementById('reservedListings');
+          container.innerHTML = '';
+        
+          bookings.forEach(booking => {
+            const card = document.createElement('div');
+            card.classList.add('listing-card');
+            card.innerHTML = `
+              <div class="booking-card">
+                <h3>${booking.listingName}</h3>
+                <p>Date: ${new Date(booking.checkinDate).toLocaleDateString()} - ${new Date(booking.checkoutDate).toLocaleDateString()}</p>
+                <p>Guests: ${booking.guests}</p>
+                <button class="cancel-btn" data-id="${booking._id}">Cancel</button>
+              </div>
+            `;
+            container.appendChild(card);
       });
+        
+        // Add cancel button functionality
+        document.querySelectorAll('.cancel-btn').forEach(button => {
+          button.addEventListener('click', async function () {
+            const bookingId = button.getAttribute('data-id');
+            const cancelResponse = await fetch(`/api/bookings/${bookingId}`, { method: 'DELETE' });
+          
+            if (cancelResponse.ok) {
+              alert('Booking cancelled successfully');
+              loadReservedBookings();
+            } else {
+              const result = await cancelResponse.json();
+              alert(result.message || 'Error cancelling booking');
+            }
+          });
+        });
+      
+      } catch (error) {
+        console.error('Error fetching reserved bookings:', error);
+        alert('There was an error loading your reserved bookings.');
+      }
+    }
 
       function openEditModal(listing) {
         document.getElementById('edit-id').value = listing._id;
@@ -222,6 +256,7 @@
       });
 
       loadListings();
+      loadReservedBookings();
     </script>
   </body>
 </html>

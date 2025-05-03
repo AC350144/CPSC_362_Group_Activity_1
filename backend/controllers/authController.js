@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const bcrypt = require('bcrypt')
 
 exports.login = async (req, res) => {
   const { username, email, password } = req.body;
@@ -22,6 +23,8 @@ exports.login = async (req, res) => {
     if (!isMatch) {
       return res.status(400).json({ message: 'Invalid password!' });
     }
+    res.json({ userId: user._id });
+    
   } catch (error) {
     console.error("Error in login:", error);
     res.status(500).json({ message: 'Server error' });

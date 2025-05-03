@@ -210,11 +210,19 @@
           return;
         }
 
+        const userId = localStorage.getItem('userId');
+
+        if (!userId) {
+          alert('You must be logged in to make a booking.');
+          return;
+        }
+
         const bookingData = {
+          userId,
           listingId,
           checkinDate,
           checkoutDate,
-          guests
+          guests,
         };
 
         try {

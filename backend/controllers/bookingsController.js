@@ -2,29 +2,29 @@ const Booking = require('../models/Bookings');
 const Listing = require('../models/Listing');
 
 exports.createBooking = async (req, res) => {
-  const { listingId, checkinDate, checkoutDate } = req.body;
-  const userId = req.user._id;
-
-  try {
-    const listing = await Listing.findById(listingId);
-    if (!listing) {
-      return res.status(404).json({ message: 'Listing not found' });
+    const { userId, listingId, checkinDate, checkoutDate, guests } = req.body;
+  
+    try {
+      if (!userId || !listingId || !checkinDate || !checkoutDate || !guests) {
+        return res.status(400).json({ message: 'Missing required fields' });
+      }
+  
+      const newBooking = new Booking({
+        userId,
+        listingId,
+        checkinDate: new Date(checkinDate),
+        checkoutDate: new Date(checkoutDate),
+        guests,
+      });
+  
+      await newBooking.save();
+      res.status(201).json({ message: 'Booking successful' });
+    } catch (error) {
+      console.error('Error creating booking:', error);
+      res.status(500).json({ message: 'Server error' });
     }
-
-    const newBooking = new Booking({
-      listingId,
-      userId,
-      checkinDate,
-      checkoutDate,
-    });
-
-    await newBooking.save();
-    res.status(201).json(newBooking);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Error creating booking', error: error.message });
-  }
 };
+  
 
 exports.cancelBooking = async (req, res) => {
     const { id } = req.params;
