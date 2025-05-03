@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Listing = require('../models/Listing');
 
 const createListing = async (req, res) => {
@@ -50,6 +51,29 @@ const getAllListings = async (req, res) => {
   }
 };
 
+const getListingById = async (req, res) => {
+  try {
+    const listingId = req.params.id;
+
+    if (!mongoose.Types.ObjectId.isValid(listingId)) {
+      return res.status(400).json({ message: "Invalid listing ID" });
+    }
+
+    const listing = await Listing.findById(listingId);
+    if (!listing) {
+      return res.status(404).json({ message: "Listing not found" });
+    }
+
+    const baseUrl = 'http://localhost:5000';
+    const fullImageUrls = listing.imageUrls.map(url => `${baseUrl}${url}`);
+
+    res.json(listing);
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+
 const deleteListing = async (req, res) => {
   try {
     const deleted = await Listing.findByIdAndDelete(req.params.id);
@@ -86,5 +110,6 @@ module.exports = {
   createListing,
   getAllListings,
   deleteListing,
-  updateListing
+  updateListing,
+  getListingById
 };

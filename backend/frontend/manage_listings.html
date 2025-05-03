@@ -74,10 +74,12 @@
         <div class="listings-grid">
           <!-- Example reserved listing -->
           <div class="listing-card">
-            <h3>Graduation Bash Downtown</h3>
-            <p>Date: June 1, 2025</p>
-            <p>Guests: 20</p>
-            <button class="cancel-btn">Cancel</button>
+            <div class="booking-card">
+              <h3>Graduation Bash Downtown</h3>
+              <p>Date: June 1, 2025</p>
+              <p>Guests: 20</p>
+              <button class="cancel-btn" data-id="bookingId">Cancel</button>
+            </div>
           </div>
           <!-- Add more reserved listings here -->
         </div>
@@ -166,6 +168,23 @@
         });
       }
     
+      document.querySelectorAll('.cancel-btn').forEach(button => {
+        button.addEventListener('click', async function () {
+          const bookingId = button.getAttribute('data-id');
+
+          const response = await fetch(`/api/bookings/${bookingId}`, {
+            method: 'DELETE',
+          });
+        
+          const result = await response.json();
+          if (response.ok) {
+            alert('Booking cancelled successfully');
+          } else {
+            alert(result.message);
+          }
+        });
+      });
+
       function openEditModal(listing) {
         document.getElementById('edit-id').value = listing._id;
         document.getElementById('edit-name').value = listing.name;

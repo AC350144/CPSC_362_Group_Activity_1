@@ -176,7 +176,7 @@
           listings.forEach(listing => {
             const listingDiv = document.createElement('a');
             listingDiv.classList.add('rental_listing');
-            listingDiv.href = 'property_details.html';
+            listingDiv.href = `/property_details.html?id=${listing._id}`;
     
             const imageUrl = listing.imageUrls.length > 0 ? listing.imageUrls[0] : 'images/rental.png';
 
