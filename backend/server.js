@@ -4,7 +4,9 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const path = require('path');
 const app = express();
+const bodyParser = require('body-parser');
 const PORT = 5000;
+
 
 dotenv.config();
 
@@ -12,6 +14,7 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'frontend')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

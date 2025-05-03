@@ -60,8 +60,31 @@ const deleteListing = async (req, res) => {
   }
 };
 
+const updateListing = async (req, res) => {
+  const { id } = req.params;
+  const { name, address, price } = req.body;
+
+  try {
+    const updatedListing = await Listing.findByIdAndUpdate(
+      id,
+      { name, address, price },
+      { new: true }
+    );
+
+    if (!updatedListing) {
+      return res.status(404).json({ message: 'Listing not found' });
+    }
+
+    res.json(updatedListing);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
 module.exports = {
   createListing,
   getAllListings,
-  deleteListing
+  deleteListing,
+  updateListing
 };
