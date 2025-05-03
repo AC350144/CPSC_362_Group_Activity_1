@@ -44,7 +44,12 @@ const createListing = async (req, res) => {
 
 const getAllListings = async (req, res) => {
   try {
-    const listings = await Listing.find();
+    const { sort_by_price } = req.query;
+    const sortOrder = sort_by_price === 'desc' ? -1 : 1;
+
+    const listings = await Listing.find()
+      .sort({ price: sortOrder });
+
     res.status(200).json(listings);
   } catch (error) {
     res.status(500).json({ message: 'Error fetching listings', error });

@@ -191,6 +191,45 @@ body {
     box-shadow: 0 0 0 2px #ddd;
 }
 
+#search_bar select {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 30px;
+    font-size: 14px;
+    width: 175px;
+    background: #f9f9f9;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #888;
+}
+
+#search_bar select:focus {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 2px #ddd;
+}
+
+#search_bar select:hover {
+    background-color: #f1f1f1;
+}
+
+#search_bar select::after {
+    content: '\25BC';
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#search_bar select {
+    position: relative;
+}
+
 .search-button {
     background: linear-gradient(to right, #FF6B6B, #4D96FF, #59C173);
     border: none;

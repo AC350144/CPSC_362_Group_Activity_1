@@ -127,6 +127,14 @@
               />
             </div>
 
+            <div class="form-group">
+              <label for="sort_by_price">Sort by Price</label>
+              <select id="sort_by_price" name="sort_by_price" style="width: 175px">
+                <option value="asc">Price: Low to High</option>
+                <option value="desc">Price: High to Low</option>
+              </select>
+            </div>
+
             <button type="submit" class="search-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,10 +174,13 @@
     </footer>
     <script>
       window.onload = async function () {
-        try {
-          const response = await fetch('/api/listings');
-          const listings = await response.json();
+        const urlParams = new URLSearchParams(window.location.search);
+        const sortByPrice = urlParams.get('sort_by_price') || 'asc';
     
+        try {
+          const response = await fetch(`/api/listings?sort_by_price=${sortByPrice}`);
+          const listings = await response.json();
+          
           const listingsContainer = document.getElementById('listings');
           listingsContainer.innerHTML = '';
     
@@ -177,14 +188,12 @@
             const listingDiv = document.createElement('a');
             listingDiv.classList.add('rental_listing');
             listingDiv.href = `/property_details.html?id=${listing._id}`;
-    
+            
             const imageUrl = listing.imageUrls.length > 0 ? listing.imageUrls[0] : 'images/rental.png';
-
-            console.log("Image URL:", listing.imageUrls[0]);
-
+    
             listingDiv.innerHTML = `
               <div class="rental_card">
-                <img src="${listing.imageUrls[0]}" class="rental_image" alt="${listing.name}" />
+                <img src="${imageUrl}" class="rental_image" alt="${listing.name}" />
                 <div class="rental_details">
                   <div class="rating">★ 4.5</div>
                   <h3>${listing.name}</h3>
@@ -193,13 +202,13 @@
                 </div>
               </div>
             `;
-    
+            
             listingsContainer.appendChild(listingDiv);
           });
         } catch (error) {
           console.error('Error fetching listings:', error);
         }
       };
-    </script>    
+    </script>       
   </body>
 </html>
