@@ -1,18 +1,16 @@
-const Booking = require('../models/Booking');
+const Booking = require('../models/Bookings');
 const Listing = require('../models/Listing');
 
-const createBooking = async (req, res) => {
+exports.createBooking = async (req, res) => {
   const { listingId, checkinDate, checkoutDate } = req.body;
-  const userId = req.user._id; // Assuming you're using authentication middleware
+  const userId = req.user._id;
 
   try {
-    // Check if listing exists
     const listing = await Listing.findById(listingId);
     if (!listing) {
       return res.status(404).json({ message: 'Listing not found' });
     }
 
-    // Create the booking
     const newBooking = new Booking({
       listingId,
       userId,
@@ -28,18 +26,16 @@ const createBooking = async (req, res) => {
   }
 };
 
-const cancelBooking = async (req, res) => {
-    const { id } = req.params; // Booking ID to cancel
-    const userId = req.user._id; // Assuming you're using authentication middleware
+exports.cancelBooking = async (req, res) => {
+    const { id } = req.params;
+    const userId = req.user._id;
   
     try {
-      // Find the booking by ID and ensure the user is the one who booked it
       const booking = await Booking.findOne({ _id: id, userId });
       if (!booking) {
         return res.status(404).json({ message: 'Booking not found or not yours' });
       }
   
-      // Cancel the booking
       booking.status = 'cancelled';
       await booking.save();
   

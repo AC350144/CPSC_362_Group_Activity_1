@@ -22,6 +22,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // API Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/listings', require('./routes/listingsRoutes'));
+app.use('/api/bookings', require('./routes/bookingsRoutes'));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'home.html'));
 });
