@@ -62,11 +62,16 @@ const getListingsByUserId = async (req, res) => {
 
 const getAllListings = async (req, res) => {
   try {
-    const { sort_by_price } = req.query;
+    const { sort_by_price, destination } = req.query;
     const sortOrder = sort_by_price === 'desc' ? -1 : 1;
 
-    const listings = await Listing.find()
-      .sort({ price: sortOrder });
+    const filter = {};
+
+    if (destination) {
+      filter.name = { $regex: destination, $options: 'i' };
+    }
+
+    const listings = await Listing.find(filter).sort({ price: sortOrder });
 
     res.status(200).json(listings);
   } catch (error) {

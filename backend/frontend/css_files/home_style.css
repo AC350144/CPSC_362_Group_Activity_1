@@ -169,6 +169,11 @@ body {
 #search_bar .form-group {
     display: flex;
     flex-direction: column;
+    margin-right: 100px;
+}
+
+#search_bar .margin-left-100{
+    margin-left: 100px;
 }
 
 #search_bar input[type="text"],
