@@ -6,6 +6,7 @@ const createListing = async (req, res) => {
     const imageUrls = req.files.map(file => `/uploads/${file.filename}`);
 
     const {
+      userId,
       name,
       shortDescription,
       longDescription,
@@ -19,7 +20,12 @@ const createListing = async (req, res) => {
       checkout,
     } = req.body;
 
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400).json({ message: 'Invalid user ID' });
+    }
+
     const newListing = new Listing({
+      userId,
       name,
       shortDescription,
       longDescription,
@@ -39,6 +45,18 @@ const createListing = async (req, res) => {
   } catch (error) {
     console.error('Listing creation error:', error);
     res.status(500).json({ message: 'Error creating listing', error: error.message });
+  }
+};
+
+const getListingsByUserId = async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const listings = await Listing.find({ userId: userId  });
+    res.json(listings);
+  } catch (err) {
+    console.error('Error fetching user listings:', err);
+    res.status(500).json({ message: 'Error fetching user listings', error: err });
   }
 };
 
@@ -116,5 +134,6 @@ module.exports = {
   getAllListings,
   deleteListing,
   updateListing,
-  getListingById
+  getListingById,
+  getListingsByUserId
 };

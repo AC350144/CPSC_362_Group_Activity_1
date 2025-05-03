@@ -182,6 +182,14 @@
         event.preventDefault();
     
         const formData = new FormData(form);
+
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+          alert("You must be logged in to post a listing.");
+          return;
+        }
+      
+        formData.append('userId', userId);
     
         try {
           const response = await fetch('/api/listings', {
@@ -190,7 +198,7 @@
           });
     
           if (response.ok) {
-            window.location.href = 'home.html'; // Redirect to homepage
+            window.location.href = 'home.html';
           } else {
             alert('Error creating listing');
           }
