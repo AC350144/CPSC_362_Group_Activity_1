@@ -4,8 +4,9 @@
     "description": "An Airbnb clone project",
     "main": "index.js",
         "scripts": {
+      "start": "node server.js",
       "test": "jest"
-    },
+},
     "dependencies": {
       "express": "^4.17.1",
       "mongoose": "^5.10.0",
