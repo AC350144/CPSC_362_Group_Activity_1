@@ -6,8 +6,7 @@ const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 
-
-dotenv.config();
+require('dotenv').config({ path: __dirname + '/.env' });
 
 // Middleware setup
 app.use(express.json());
@@ -28,6 +27,7 @@ app.get('/', (req, res) => {
 
 // MongoDB connection and server setup
 
+console.log('MONGO_URI is:', process.env.MONGO_URI);
 const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
