@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 
-require('dotenv').config({ path: __dirname + '/.env' });
+//('dotenv').config({ path: __dirname + '/.env' });
 
 // Middleware setup
 app.use(express.json());
