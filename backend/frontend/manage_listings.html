@@ -199,6 +199,7 @@
                 <h3>${booking.listingName}</h3>
                 <p>Date: ${new Date(booking.checkinDate).toLocaleDateString()} - ${new Date(booking.checkoutDate).toLocaleDateString()}</p>
                 <p>Guests: ${booking.guests}</p>
+                <a class="message-btn" href="inbox.html?bookingId=${booking._id}">Message Host</a>
                 <button class="cancel-btn" data-id="${booking._id}">Cancel</button>
               </div>
             `;

@@ -254,11 +254,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 100%;
     margin: 0 70px;
     margin-bottom: 50px;
 }
+
 
 .rental_listing {
     text-decoration: none;

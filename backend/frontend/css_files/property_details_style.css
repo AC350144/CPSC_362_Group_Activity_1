@@ -150,33 +150,33 @@ body {
     object-fit: cover;
   }
   
-  .gallery-small {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-    height: 100%;
-  }
-  
-  .gallery-small img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .small-last {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .small-last img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+.gallery-small{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  height: 600px;
+}
+
+.gallery-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-small div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.small-last img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
   
   .show-all {
     position: absolute;

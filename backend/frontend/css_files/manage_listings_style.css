@@ -177,7 +177,7 @@ body{
     margin-bottom: 8px;
 }
 
-.deleteBtn, .cancel-btn, .editBtn {
+.deleteBtn, .cancel-btn, .editBtn, .message-btn {
     margin-top: 15px;
     padding: 10px 20px;
     border: none;
@@ -187,6 +187,7 @@ body{
     font-weight: 600;
     color: #fff;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .deleteBtn,.cancel-btn {
@@ -197,11 +198,11 @@ body{
     background-color: #c92e3b;
 }
 
-.editBtn {
+.editBtn, .message-btn {
     background-color: #457b9d;
 }
 
-.editBtn:hover {
+.editBtn:hover, .message-btn:hover {
     background-color: #366284;
 }
 
