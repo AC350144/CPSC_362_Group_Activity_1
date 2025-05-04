@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 
-//('dotenv').config({ path: __dirname + '/.env' });
+//('dotenv').config({ path: __dirname + '/.env' });       this was used for running locally
 //require('dotenv').config({ path: __dirname + '/.env' });
 
 // Middleware setup
