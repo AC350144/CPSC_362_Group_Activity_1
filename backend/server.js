@@ -29,17 +29,11 @@ app.get('/', (req, res) => {
 // MongoDB connection and server setup
 
 console.log('MONGO_URI is:', process.env.MONGO_URI);
-const PORT = process.env.PORT || 5000;
-const HOST = '0.0.0.0'; // This is required for Render
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+const PORT = process.env.PORT || 10000;
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');
-    app.listen(PORT, HOST, () => {
-      console.log(`Server running on http://${HOST}:${PORT}`);
-    });
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch(err => console.error(err));
   
