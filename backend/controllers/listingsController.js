@@ -3,7 +3,10 @@ const Listing = require('../models/Listing');
 
 const createListing = async (req, res) => {
   try {
-    const imageUrls = req.files.map(file => `/uploads/${file.filename}`);
+    const imageUrls = Array.isArray(req.files)
+      ? req.files.map(file => `/uploads/${file.filename}`)
+      : [];
+
 
     const {
       userId,
