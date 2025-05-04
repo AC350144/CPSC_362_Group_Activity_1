@@ -4,7 +4,7 @@
     "description": "An Airbnb clone project",
     "main": "index.js",
         "scripts": {
-      "start": "node server.js",
+      "start": "node backend/server.js",
       "test": "jest"
 },
     "dependencies": {
