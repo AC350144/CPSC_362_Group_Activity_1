@@ -95,7 +95,7 @@ const getListingById = async (req, res) => {
       return res.status(404).json({ message: "Listing not found" });
     }
 
-    const baseUrl = 'http://localhost:5000';
+    const baseUrl = '';
     const fullImageUrls = listing.imageUrls.map(url => `${baseUrl}${url}`);
 
     res.json(listing);
