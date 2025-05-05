@@ -40,12 +40,12 @@ For solo performers, party havers, or anyone looking for a space to rent out (ra
 
  ## Instructions for running the site
 
- ### Check out our [InstantParty Website](https://instantparty.onrender.com/login.html) , which is deployed on Render.
+  - **Check out our [InstantParty Website](https://instantparty.onrender.com/login.html) , which is deployed on Render.**
 
- ### If you want to run it locally then follow these steps:
+  - **If you want to run it locally then follow these steps:**
 
-  - 
+    - 
 
-## Diagram of our site
+### Diagram of our site
 ![image](https://github.com/user-attachments/assets/58f887ef-2e93-4b2c-a332-b1f9ca65f015)
 
