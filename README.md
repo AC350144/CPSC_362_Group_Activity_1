@@ -43,8 +43,58 @@ For solo performers, party havers, or anyone looking for a space to rent out (ra
   - **Check out our [InstantParty Website](https://instantparty.onrender.com/login.html) , which is deployed on Render.**
 
   - **If you want to run it locally then follow these steps:**
+## Steps to Run
 
-    - 
+### 1. Clone the Git Repository
+
+```bash
+git clone <repository_url>
+cd <repository_directory>
+```
+
+### 2. Install Dependencies
+
+We’ve made a `run.sh` file for Linux/Ubuntu users that will create a virtual environment and install the dependencies to run our app:
+
+```bash
+./run.sh
+```
+
+**If this doesn’t work for you**, manually install the following dependencies from `requirements.txt` using:
+
+```bash
+pip install "dependencyName"
+```
+
+#### Dependencies:
+- `flask`, `flask-cors`
+- `python3-venv`, `python-dotenv`
+- `node.js`
+- `express`
+- `npm`
+- `mongoose`, `bcrypt`, `supertest` (for backend testing)
+
+### 3. Run the Application
+
+> **Note:** If you ran the `run.sh` file, it will automatically start the server.  
+> If you want to run it manually, navigate to the directory and run:
+
+```bash
+node backend/server.js
+```
+
+### 4. View the Application
+
+Open a browser and go to:  
+[http://localhost:10000](http://localhost:10000)
+
+### 5. Run Backend Tests
+
+To run backend tests with coverage:
+
+```bash
+npx jest --coverage
+```
 
 ### Diagram of our site
 ![image](https://github.com/user-attachments/assets/58f887ef-2e93-4b2c-a332-b1f9ca65f015)
