@@ -1,6 +1,8 @@
 # InstantParty
 
-## Product Vision
+### Watch a video demo of our [InstantParty Website](https://www.youtube.com/watch?v=uXWyvXYy-EQ&ab_channel=Amanda) !
+
+### Product Vision
 
 For solo performers, party havers, or anyone looking for a space to rent out (ranging from a small venue to a large lot), **InstantParty** is an online marketplace that connects customers with space lenders. It provides a seamless and secure platform to book or list properties. Unlike Airbnb, our product is highly automated and values customer feedback.
 
