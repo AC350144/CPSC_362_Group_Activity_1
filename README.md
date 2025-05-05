@@ -47,5 +47,5 @@ For solo performers, party havers, or anyone looking for a space to rent out (ra
   - 
 
 ## Diagram of our site
-![image](https://github.com/AC350144/CPSC_362_Group_Activity_1/issues/1#issue-3038450034)
+![image](https://github.com/user-attachments/assets/58f887ef-2e93-4b2c-a332-b1f9ca65f015)
 
