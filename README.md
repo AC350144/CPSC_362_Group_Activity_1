@@ -37,7 +37,15 @@ For solo performers, party havers, or anyone looking for a space to rent out (ra
   - The platform must be accessible on any device.
 - **Usability:**
   - The system should be easy to understand and use for all users.
- 
 
-![image](https://github.com/user-attachments/assets/48942717-11ab-4a45-b66f-e3672eae774e)
+ ## Instructions for running the site
+
+ ### Check out our [InstantParty Website](https://instantparty.onrender.com/login.html) , which is deployed on Render.
+
+ ### If you want to run it locally then follow these steps:
+
+  - 
+
+## Diagram of our site
+![image](https://github.com/AC350144/CPSC_362_Group_Activity_1/issues/1#issue-3038450034)
 
